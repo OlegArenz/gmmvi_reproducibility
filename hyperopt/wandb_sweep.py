@@ -58,9 +58,10 @@ class WandbWorker:
             output_dict = self.gmmvi_runner.iterate_and_log(n)
             wandb.log(output_dict)
 
-            if self.should_early_stop(runtime, output_dict):
-                output_dict.update({"-elbo": np.nan})
-                break
+            if "-elbo" in output_dict.keys():
+                if self.should_early_stop(runtime, output_dict):
+                    output_dict.update({"-elbo": np.nan})
+                    break
 
     def should_early_stop(self, runtime, output_dict):
         entropy = output_dict["entropy"]
