@@ -31,6 +31,7 @@ class WandbWorker:
         self.max_seconds = args.max_seconds
 
         config = get_default_config(args.algorithm_id, args.experiment_id)
+        config.update({"seed": 1})
 
         # read the sweep_config to figure out which hyperparameters are chosen by wandb
         parameter_strings = list(load_yaml(args.sweep_config)['parameters'].keys())
