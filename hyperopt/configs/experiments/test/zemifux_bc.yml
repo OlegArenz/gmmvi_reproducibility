@@ -6,9 +6,12 @@ command:
   - ${env}
   - ${interpreter}
   - ${program}
-  - "--algorithm_id zemifux"
-  - "--experiment_id breast_cancer"
-  - "--sweep_config configs/experiments/test/zemifux_bc.yml"   # Should reference _this_ file
+  - "--algorithm_id"
+  - "zemifux"
+  - "--experiment_id"
+  - "breast_cancer"
+  - "--sweep_config"
+  - "configs/experiments/test/zemifux_bc.yml"   # Should reference _this_ file
   - "--max_fevals"
   - "10000000"
   - "--max_seconds"
