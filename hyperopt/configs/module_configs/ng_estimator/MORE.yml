@@ -1,0 +1,3 @@
+ng_estimator_type: "MORE"
+ng_estimator_config:
+  initial_l2_regularizer: TODO

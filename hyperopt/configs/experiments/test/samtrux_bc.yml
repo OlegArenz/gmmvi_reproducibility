@@ -1,0 +1,38 @@
+entity: joa
+project: SteinVIPS
+program: wandb_sweep.py
+name: samtrux_bc
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - "--algorithm_id samtrux"
+  - "--experiment_id breast_cancer"
+  - "--sweep_config configs/experiments/test/samtrux_bc.yml"   # Should reference _this_ file
+  - "--max_fevals"
+  - "10000000"
+  - "--max_seconds"
+  - "7200"
+
+method: bayes
+
+metric:
+  name: -elbo
+  goal: minimize
+
+parameters:
+  sample_selector_config.ratio_reused_samples_to_desired:
+      min: 0.
+      max: 1.
+  sample_selector_config.desired_samples_per_component:
+    min: 1
+    max: 1000
+  component_stepsize_adapter_config.initial_stepsize:
+      distribution: log_uniform
+      min: -20.
+      max: 0.
+  num_initial_components:
+      min: 1
+      max: 50
+
+

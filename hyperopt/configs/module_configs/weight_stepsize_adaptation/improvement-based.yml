@@ -1,0 +1,8 @@
+weight_stepsize_adapter_type: "improvement_based"
+weight_stepsize_adapter_config:
+  initial_stepsize: 1.
+  min_stepsize: TODO
+  max_stepsize: TODO
+  stepsize_inc_factor: TODO
+  stepsize_dec_factor: TODO
+  

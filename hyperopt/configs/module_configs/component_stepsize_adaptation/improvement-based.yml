@@ -1,0 +1,7 @@
+component_stepsize_adapter_type: "improvement-based"
+component_stepsize_adapter_config:
+  initial_stepsize: TODO
+  min_stepsize: TODO
+  max_stepsize: TODO
+  stepsize_inc_factor: TODO
+  stepsize_dec_factor: TODO

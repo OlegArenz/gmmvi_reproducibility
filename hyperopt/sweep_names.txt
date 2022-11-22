@@ -1,0 +1,9 @@
+
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml b: command not found
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml wandb agent joa/SteinVIPS/025z3uf4
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml wandb agent joa/SteinVIPS/iaei2bat
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml wandb agent joa/SteinVIPS/wcp4gp22
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml wandb agent joa/SteinVIPS/jxuncq4h
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml wandb agent joa/SteinVIPS/5z00xb21
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml wandb agent joa/SteinVIPS/s3mfn19g
+../../gmmvi_test/cluster/configs/wandb_sweeps/sweep_configs/component_update/sweep_configs/breast_cancer/pismok_BC.yml wandb agent joa/SteinVIPS/rgucqshh

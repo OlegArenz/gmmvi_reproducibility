@@ -1,0 +1,12 @@
+log_metrics_interval: 5
+temperature: 1.
+start_seed: 10000
+num_initial_components: SWEEP
+use_diagonal_covars: False
+use_sample_database: True
+num_prior_samples: 0
+
+experiment_name: "WINE"
+experiment_config:
+  likelihood_scaling: SWEEP
+

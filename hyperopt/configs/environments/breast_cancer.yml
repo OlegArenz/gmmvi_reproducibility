@@ -1,0 +1,16 @@
+experiment_name: "breastCancer"
+experiment_config: {}
+
+gmmvi_runner_config:
+    log_metrics_interval: 100
+
+start_seed: 10000
+
+num_initial_components: 1
+use_diagonal_covars: False
+
+use_sample_database: True
+max_database_size: 10000000
+num_prior_samples: 0
+temperature: 1.
+
