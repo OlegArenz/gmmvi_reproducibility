@@ -38,7 +38,7 @@ class WandbWorker:
         wandb.init(config=hyperparameter_defaults, project="gmmvi_sweeps", entity="joa",
                    dir="/work/scratch/j_arenz/wandb")
 
-        # The hyperparameters chosen byu wandb are in wandb.config. We use them to overwrite the default values.
+        # The hyperparameters chosen by wandb are in wandb.config. We use them to overwrite the default values.
         print(f"wandb.config: {wandb.config}")
         for k, v in wandb.config.items():
             parameter_as_dict = key_list_to_dict(k.split("."), v)
