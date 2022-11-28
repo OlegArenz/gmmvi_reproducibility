@@ -31,6 +31,7 @@ class WandbWorker:
         self.max_seconds = args.max_seconds
 
         config = get_default_config(args.algorithm_id, args.experiment_id)
+        config.update({"seed": 1})
 
         # read the sweep_config to figure out which hyperparameters are chosen by wandb
         parameter_strings = list(load_yaml(args.sweep_config)['parameters'].keys())
@@ -38,7 +39,7 @@ class WandbWorker:
         wandb.init(config=hyperparameter_defaults, project="gmmvi_sweeps", entity="joa",
                    dir="/work/scratch/j_arenz/wandb")
 
-        # The hyperparameters chosen byu wandb are in wandb.config. We use them to overwrite the default values.
+        # The hyperparameters chosen by wandb are in wandb.config. We use them to overwrite the default values.
         print(f"wandb.config: {wandb.config}")
         for k, v in wandb.config.items():
             parameter_as_dict = key_list_to_dict(k.split("."), v)
@@ -58,15 +59,16 @@ class WandbWorker:
             output_dict = self.gmmvi_runner.iterate_and_log(n)
             wandb.log(output_dict)
 
-            if self.should_early_stop(runtime, output_dict):
-                output_dict.update({"-elbo": np.nan})
-                break
+            if "-elbo" in output_dict.keys():
+                if self.should_early_stop(runtime, output_dict):
+                    output_dict.update({"-elbo": np.nan})
+                    break
 
     def should_early_stop(self, runtime, output_dict):
         entropy = output_dict["entropy"]
         elbo = -output_dict["-elbo"]
         num_fevals = self.gmmvi_runner.gmmvi.sample_db.num_samples_written.numpy()
-        if self.gmmvi_runner.config["experiment_name"] == "breastCancer":
+        if self.gmmvi_runner.config["environment_name"] == "breastCancer":
             if entropy < -1000:
                 print("Early stopping due to bad conditioning")
                 return True
@@ -76,7 +78,7 @@ class WandbWorker:
             if ((runtime > 1800) or (num_fevals > 1e6)) and (elbo < -1000):
                 print("Early stopping due to bad elbo")
                 return True
-        if self.gmmvi_runner.config["experiment_name"] == "breastCancer_mb":
+        if self.gmmvi_runner.config["environment_name"] == "breastCancer_mb":
             if entropy < -1000:
                 print("Early stopping due to bad conditioning")
                 return True
