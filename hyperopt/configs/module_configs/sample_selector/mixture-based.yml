@@ -1,4 +1,0 @@
-sample_selector_type: "mixture-based"
-sample_selector_config:
-  desired_samples_per_component: TODO
-  ratio_reused_samples_to_desired: TODO

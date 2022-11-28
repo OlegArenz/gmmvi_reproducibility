@@ -1,4 +1,0 @@
-component_stepsize_adapter_type: "decaying"
-component_stepsize_adapter_config:
-  initial_stepsize: TODO
-  annealing_expionent: TODO

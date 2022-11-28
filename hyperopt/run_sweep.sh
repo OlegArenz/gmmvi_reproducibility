@@ -18,4 +18,4 @@ sed -e "s/NUM_WORKERS/${NUM_WORKERS}/g" -e "s;SWEEP_CMD;${SWEEP_CMD};g" -e "s/CO
 echo generated sbatch file: $GENERATED_SBATCH
 # sbatch ${@:2} $GENERATED_SBATCH
 
-echo $1 $SWEEP_CMD >> sweep_names.txt
+echo $1 $SWEEP_NAME >> sweep_names.txt

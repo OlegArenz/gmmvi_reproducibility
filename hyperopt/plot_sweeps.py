@@ -1,6 +1,8 @@
 import os
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
 import matplotlib
 plt.ion()
 
@@ -14,30 +16,25 @@ def plot_best_runs(root_path, num_best, x_column, y_column, axes, subtract_y=0.,
         print(data_frame[y_column].min())
         if data_frame[y_column].min() < 0:
             print("debug")
-        i+=1
+        i += 1
         if i > num_best:
             break
 
 def plot_list(algorithm_names):
     my_path = os.path.dirname(os.path.realpath(__file__))
-    data_path = os.path.join(my_path, "../../../data")
+    data_path = os.path.join(my_path, "results")
     figure = plt.figure()
     colormap = matplotlib.cm.get_cmap(name="tab10", lut=len(algorithm_names))
     for i in range(len(algorithm_names)):
         print(f"plotting {algorithm_names[i]}")
         plot_best_runs(os.path.join(data_path, algorithm_names[i], "best_runs"),
-                       1,
-                       "_runtime",
+                       10,
+                       "runtime",
                        "-elbo",
                        figure.gca(),
                        78.,
                        style=[colormap(i / len(algorithm_names))])
 
 if __name__ == "__main__":
-    plot_list(["pismok", "pismou",
-                "pizmok", "pizmol", "pizmou",
-                "pysmok", "pysmol", "pysmou",
-                "pyzmok", "pyzmol",
-                "prsmok", "prsmol", "prsmou",
-                "przmok", "przmol", "przmou"])
+    plot_list(["zemifux_bc"])
     print("done")
