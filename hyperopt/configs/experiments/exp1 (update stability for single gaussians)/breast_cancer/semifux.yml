@@ -27,11 +27,6 @@ parameters:
   model_initialization.num_initial_components:
     value: 5
 
-  ng_estimator_config.initial_l2_regularizer:
-    distribution: log_uniform_values
-    min: 1e-20
-    max: 1e-6
-
   ng_estimator_config.use_self_normalized_importance_weights:
     values: [True, False]
 
