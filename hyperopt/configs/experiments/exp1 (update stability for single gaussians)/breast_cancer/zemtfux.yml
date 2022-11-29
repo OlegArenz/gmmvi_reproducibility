@@ -1,17 +1,17 @@
 entity: joa
 project: gmmvi_sweep_test
 program: wandb_sweep.py
-name: zemifux_bc
+name: exp1_bc_zemtfux
 command:
   - ${env}
   - ${interpreter}
   - ${program}
   - "--algorithm_id"
-  - "zemifux"
+  - "zemtfux"
   - "--experiment_id"
   - "breast_cancer"
   - "--sweep_config"
-  - "configs/experiments/test/zemifux_bc.yml"   # Should reference _this_ file
+  - "configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtfux.yml"   # Should reference _this_ file
   - "--max_fevals"
   - "10000000"
   - "--max_seconds"
@@ -46,7 +46,7 @@ parameters:
 
   component_stepsize_adapter_config.initial_stepsize:
     distribution: log_uniform_values
-    min: 1e-7
+    min: 1e-5
     max: 1.
 
 

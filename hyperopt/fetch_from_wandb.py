@@ -10,12 +10,13 @@ from tqdm import tqdm
 def summarize_sweep(sweep):
     summary_list, config_list, name_list, elbo_list, history_list = [], [], [], [], []
     for run in tqdm(sweep.runs):
-        summary_list.append(run.summary._json_dict)
         cheap_metrics = run.scan_history(keys=["_step", "walltime", "num_samples", "num_components"])
         expensive_metrics = pd.DataFrame(run.scan_history(keys=["-elbo", "entropy", "target_density", "_step"]))
         if len(expensive_metrics) < 10:
             print(f"\n skipping run {run.name} because it only has {len(expensive_metrics)} elbo evaluations")
             continue
+        summary_list.append(run.summary._json_dict)
+
         # add runtime to the dataframe
         runtimes = np.cumsum([row["walltime"] for row in cheap_metrics])
         expensive_metrics["runtime"] = runtimes[expensive_metrics['_step'].values]
