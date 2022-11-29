@@ -19,8 +19,8 @@ module load gcc python/3.8
 # Activate the virtualenv / conda environment
 source ~/virtualenvs/gmmvi_test/bin/activate
 
-# Start NUM_WORKER Workers
-count=NUM_WORKER
+# Start NUM_WORKERS Workers
+count=NUM_WORKERS
 for i in $(seq $count); do
     srun -cCORES_PER_WORKER SWEEP_CMD &
 done
