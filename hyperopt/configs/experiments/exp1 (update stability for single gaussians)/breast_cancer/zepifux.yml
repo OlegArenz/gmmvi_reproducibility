@@ -1,5 +1,5 @@
 entity: joa
-project: gmmvi_sweeps
+project: gmmvi_exp1_bc
 program: wandb_sweep.py
 name: exp1_bc_zepifux
 command:
@@ -26,6 +26,9 @@ metric:
 parameters:
   model_initialization.num_initial_components:
     value: 5
+
+  weight_stepsize_adapter_config.initial_stepsize:
+    value: 0.
 
   ng_estimator_config.initial_l2_regularizer:
     distribution: log_uniform_values

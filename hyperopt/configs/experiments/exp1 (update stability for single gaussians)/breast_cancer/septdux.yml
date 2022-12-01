@@ -1,5 +1,5 @@
 entity: joa
-project: gmmvi_sweeps
+project: gmmvi_exp1_bc
 program: wandb_sweep.py
 name: exp1_bc_septdux
 command:
@@ -29,6 +29,9 @@ parameters:
 
   ng_estimator_config.use_self_normalized_importance_weights:
     values: [True, False]
+
+  weight_stepsize_adapter_config.initial_stepsize:
+    value: 0.
 
   sample_selector_config.desired_samples_per_component:
     min: 1
