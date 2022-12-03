@@ -9,7 +9,7 @@ command:
   - "--algorithm_id"
   - "septrux"
   - "--experiment_id"
-  - "breastCancer_mb"
+  - "breast_cancer_mb"
   - "--sweep_config"
   - "configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/septrux.yml"   # Should reference _this_ file
   - "--max_fevals"

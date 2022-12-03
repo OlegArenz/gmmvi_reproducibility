@@ -4,16 +4,14 @@ cd "$(dirname "$0")" # Set CWD to script directory
 # We assume that some arguments are "passed" by setting the following environment variables NUM_WORKERS, CORES_PER_WORKER
 # Example usage `NUM_WORKERS=16 CORES_PER_WORKER=6 ./run_sweep ../path/to/sweep_config.yml`
 
-echo $NUM_WORKERS
-echo $CORES_PER_WORKER
+#echo $NUM_WORKERS
+#echo $CORES_PER_WORKER
 
 WANDB_MSG=($(wandb sweep "$1" 2>&1))
 echo $WANDB_MSG
 SWEEP_CMD=${WANDB_MSG[@]: -3}
 
 echo running sweep with $SWEEP_CMD
-
-echo "basename $1 .yml"
 
 CONFIG_NAME=`basename "$1" .yml` 
 SWEEP_NAME=`echo $SWEEP_CMD | awk -F"/" '{print $NF}'`
