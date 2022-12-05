@@ -39,8 +39,8 @@ parameters:
     max: 1e-6
 
   sample_selector_config.desired_samples_per_component:
-    min: 1
-    max: 1000
+  min: 310
+  max: 3100
 
   sample_selector_config.ratio_reused_samples_to_desired:
     distribution: uniform
