@@ -71,6 +71,7 @@ class WandbWorker:
         num_fevals = self.gmmvi_runner.gmmvi.sample_db.num_samples_written.numpy()
         if entropy - self.initial_entropy > self.gmmvi_runner.gmmvi.sample_selector.target_distribtion.num_dimensions:
             print("Early stopping due to bad conditioning")
+            return True
 
         if self.gmmvi_runner.config["environment_name"] == "breastCancer":
           #  if entropy > 1000:
