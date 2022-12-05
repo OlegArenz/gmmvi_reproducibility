@@ -15,7 +15,7 @@ command:
   - "--max_fevals"
   - "10000000"
   - "--max_seconds"
-  - "28600"
+  - "10700"
 
 method: bayes
 
