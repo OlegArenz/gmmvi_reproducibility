@@ -90,10 +90,10 @@ def get_sweep_ids(project_name):
 if __name__ == "__main__":
     api = wandb.Api(timeout=30)
 
-    process_sweep(api, group_name="joa", project_names=["exp1_bc", "exp1_bcmb"],
-                  sweep_names=["zepyrux", "zepyfux", "zepydux",
-                               "zeptrux", "zeptfux", "zeptdux",
-                               "zepirux", "zepifux", "zepidux",
+    process_sweep(api, group_name="joa", project_names=["exp1_wine", "exp1_bc", "exp1_bcmb"],
+                  sweep_names=[#"zepyrux", "zepyfux", "zepydux",
+                               #"zeptrux", "zeptfux", "zeptdux",
+                               #"zepirux", "zepifux", "zepidux",
                                "sepyrux", "sepyfux", "sepydux",
                                "septrux", "septfux", "septdux",
                                "sepirux", "sepifux", "sepidux"])
