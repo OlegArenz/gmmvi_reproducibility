@@ -1,246 +1,54 @@
-zemifux_bc joa/gmmvi_sweep_test/7ofxrc0u
-zemidux_bc joa/gmmvi_sweep_test/okk8u6o0
-configs/experiments/exp1 exp1
-configs/experiments/exp1 exp1
-configs/experiments/exp1 exp1
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml semidux.yml)
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml ci9i2b94
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml lj2
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml zn7
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml 8z3
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml 905jxudi
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml 9djv96xd
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml lbih6wlr
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semifux.yml jt2v7607
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semirux.yml riqzd6au
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtdux.yml rsfs99pn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtfux.yml h48j791f
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtrux.yml ibffxzzy
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semydux.yml ffumo0a0
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyfux.yml pfz6fnpm
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyrux.yml jnt0djzd
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepidux.yml xozew5bn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepifux.yml d46gqryn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepirux.yml pgha46mn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septdux.yml rzc015kd
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septfux.yml lchaddqg
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septrux.yml r5q8q3a6
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepydux.yml 8sahkdfk
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyfux.yml ybxasfx0
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyrux.yml iqw2wvd5
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemidux.yml qwkx6xmt
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemifux.yml 2ywe3t7f
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemirux.yml 0fg8hffc
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtdux.yml 9vn96h9g
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtfux.yml jbjv38tq
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtrux.yml w42pmbvy
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemydux.yml 7p47c9ra
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyfux.yml zwo9ewyh
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyrux.yml 03k0x9bd
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepidux.yml 8a0pb2nm
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepifux.yml 2zbnygbx
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepirux.yml s3u5e82n
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptdux.yml qxmoutlk
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptfux.yml qj6vtsoa
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptrux.yml 1auiqoqn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepydux.yml kvnsz0rf
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyfux.yml wg8k3h04
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyrux.yml trbi6k8o
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml bij0yj8p
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semifux.yml 7wdwjs52
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semirux.yml 38a4bn7m
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtdux.yml iymspubr
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtfux.yml 5sonrdxz
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtrux.yml 19544sry
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semydux.yml q92otoro
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyfux.yml zq71ib8r
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyrux.yml k68vazai
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepidux.yml 0ncfyl16
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepifux.yml 12rq1bc0
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepirux.yml s88dd1bp
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septdux.yml a82rqsjy
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septfux.yml wnycj1q7
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septrux.yml 74bemc1q
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepydux.yml 61jvbs1r
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyfux.yml 22p1754w
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyrux.yml stv800p5
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemidux.yml n32s69bz
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemifux.yml 7nrpdg79
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemirux.yml 4owcjc0l
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtdux.yml 09iqz97o
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtfux.yml z7tu8i3n
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtrux.yml ppbuxgjc
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemydux.yml l8re0f5u
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyfux.yml tqsumva9
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyrux.yml 7dxbxjmq
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepidux.yml 9179e0sk
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepifux.yml jqu2eqny
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepirux.yml 5bt600fl
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptdux.yml cbq9dyah
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptfux.yml ven07n6v
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptrux.yml lwc8g4c3
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepydux.yml 1nib174r
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyfux.yml ulgxja2w
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyrux.yml thua5brz
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml aokviq22
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semifux.yml fwml41o9
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semirux.yml b8iqy757
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtdux.yml uomvtego
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtfux.yml 6uspu105
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtrux.yml 2dxm5w9i
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semydux.yml alca8xum
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyfux.yml dhh9bt2f
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyrux.yml wzznm2b4
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepidux.yml q62dv6oe
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepifux.yml u37jh6ii
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepirux.yml yw1hruly
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septdux.yml r0df0eq3
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septfux.yml qba5ajfb
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septrux.yml nzsnjo0x
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepydux.yml 5bp2mkwp
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyfux.yml itwj9igv
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyrux.yml okn4iwzg
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemidux.yml pnuzt8uw
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemifux.yml 4da3mxa7
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemirux.yml nwygdxxa
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtdux.yml bl2hvtcp
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtfux.yml sqbtmtpg
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtrux.yml tpptgnkt
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemydux.yml ro0gq72v
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyfux.yml 0xbh50kq
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyrux.yml issgs3ge
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepidux.yml aasngqon
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepifux.yml luqerrho
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepirux.yml k9wnxl8y
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptdux.yml cmg05wk4
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptfux.yml n0c3r84k
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptrux.yml qeacf06n
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepydux.yml hzpy82ml
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyfux.yml rrz2a4ic
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyrux.yml 7xgyk4qn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semidux.yml y1qor2kv
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semifux.yml u8utyrye
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semirux.yml v2v9skva
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtdux.yml enm4db4h
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtfux.yml 42yh46d1
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semtrux.yml pzi41k2i
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semydux.yml 5mvpzt8w
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyfux.yml dt7bf9ct
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/semyrux.yml p5g300kh
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepidux.yml f2ixa0sr
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepifux.yml 3hkqy8l1
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepirux.yml kcp0xtsi
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septdux.yml auf87wt8
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septfux.yml q4m9s888
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septrux.yml q0j9f8qw
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepydux.yml a4nvsydb
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyfux.yml wg1g0ayj
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyrux.yml ua4h4gzu
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemidux.yml mrfyg06p
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemifux.yml 3lpbp431
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemirux.yml ctyrt3n8
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtdux.yml 5ap5evwx
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtfux.yml npp8m515
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemtrux.yml 0ri7cqmp
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemydux.yml fuetzmdi
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyfux.yml ufih24dr
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zemyrux.yml 53lors84
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepidux.yml t3znqc22
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepifux.yml i8ev9idi
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepirux.yml qizzx0p6
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptdux.yml rfksgz8j
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptfux.yml jf6gmzqk
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptrux.yml mtvgmkgy
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepydux.yml j3nzcnm9
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyfux.yml 5jyf6ir1
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyrux.yml 7xka37lv
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepidux.yml 39x3wicv
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepifux.yml 456a30ip
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepirux.yml 9v3b20fe
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septdux.yml yle9jb2m
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septfux.yml zy90g4yo
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/septrux.yml pninka33
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepydux.yml wwglxkf5
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyfux.yml gkaqiu71
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/sepyrux.yml x3qljxj0
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepidux.yml u7zdqfm2
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepifux.yml fd7nanp4
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepirux.yml 15i2webr
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptdux.yml df689zpj
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptfux.yml j7424u9w
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptrux.yml yat4c313
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepydux.yml svjnb1fn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyfux.yml oce2szn9
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyrux.yml 8y63z3ca
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepidux.yml u2tz6xlw
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepifux.yml 8ndoi9a5
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepirux.yml 3n28rgjm
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/septdux.yml nsqh66qw
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/septfux.yml zwrb743b
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/septrux.yml 2xb6qaus
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepydux.yml ascg36vr
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepyfux.yml f90y8ybw
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepyrux.yml tnxd73l2
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepidux.yml muybfab5
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepifux.yml a2jrrxwj
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepirux.yml 4sbqzzda
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptdux.yml ghnvv7t0
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptfux.yml 1pl48n24
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptrux.yml wmv1jyou
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepydux.yml ifj725nu
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepyfux.yml qz813v7a
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepyrux.yml izraotom
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepidux.yml 9qqtxy2o
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepifux.yml 4d7nf2sd
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepirux.yml dvswdn39
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/septdux.yml xjozx2m1
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/septfux.yml xoxmi42e
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/septrux.yml i3xx3mh7
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepydux.yml py2pqff4
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepyfux.yml 6297gx82
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/sepyrux.yml 7qyq76zi
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepidux.yml 194iuoqs
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepifux.yml 388qtdwb
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepirux.yml vgqo44jj
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptdux.yml 9uyt3s2r
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptfux.yml affahmo1
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptrux.yml 18lxz8tu
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepydux.yml gmdz0x1f
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepyfux.yml t66ud5g5
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepyrux.yml 312887r2
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepidux.yml h11yl4sj
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepifux.yml 7dzzur9b
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepirux.yml vnixov3i
-configs/experiments/exp1 (update stability for single gaussians)/wine/septdux.yml 0b3wo069
-configs/experiments/exp1 (update stability for single gaussians)/wine/septfux.yml 3snojgfm
-configs/experiments/exp1 (update stability for single gaussians)/wine/septrux.yml xid3comy
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepydux.yml 21lg4a4g
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepyfux.yml utjvybgs
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepyrux.yml bj6j5m3t
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepidux.yml 9siy6rc1
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepifux.yml 78xmy8sc
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepirux.yml d11bwgmk
-configs/experiments/exp1 (update stability for single gaussians)/wine/zeptdux.yml exq551o5
-configs/experiments/exp1 (update stability for single gaussians)/wine/zeptfux.yml 8cqvy203
-configs/experiments/exp1 (update stability for single gaussians)/wine/zeptrux.yml nzrpmn6k
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepydux.yml iia9a4k2
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepyfux.yml r0iqh39k
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepyrux.yml b1awga6i
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepidux.yml u1hjl9yi
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepifux.yml fx6qczi5
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepirux.yml 0rzhkzhg
-configs/experiments/exp1 (update stability for single gaussians)/wine/septdux.yml use1w8ci
-configs/experiments/exp1 (update stability for single gaussians)/wine/septfux.yml ok8g3s61
-configs/experiments/exp1 (update stability for single gaussians)/wine/septrux.yml bysjraaj
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepydux.yml dcfc656i
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepyfux.yml sczw748y
-configs/experiments/exp1 (update stability for single gaussians)/wine/sepyrux.yml 1jydd6n6
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepidux.yml 9v4ldlrw
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepifux.yml 6tmmr88e
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepirux.yml azzq358t
-configs/experiments/exp1 (update stability for single gaussians)/wine/zeptdux.yml fclk51e3
-configs/experiments/exp1 (update stability for single gaussians)/wine/zeptfux.yml 0gmpe8tl
-configs/experiments/exp1 (update stability for single gaussians)/wine/zeptrux.yml ilkm23h7
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepydux.yml h5zf2nkj
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepyfux.yml 7fnyj10z
-configs/experiments/exp1 (update stability for single gaussians)/wine/zepyrux.yml urhh6w8z
+gmmvi_exp1_bc sepidux 39x3wicv
+gmmvi_exp1_bc sepifux 456a30ip
+gmmvi_exp1_bc sepirux 9v3b20fe
+gmmvi_exp1_bc septdux yle9jb2m
+gmmvi_exp1_bc septfux zy90g4yo
+gmmvi_exp1_bc septrux pninka33
+gmmvi_exp1_bc sepydux wwglxkf5
+gmmvi_exp1_bc sepyfux gkaqiu71
+gmmvi_exp1_bc sepyrux x3qljxj0
+gmmvi_exp1_bc zepidux u7zdqfm2
+gmmvi_exp1_bc zepifux fd7nanp4
+gmmvi_exp1_bc zepirux 15i2webr
+gmmvi_exp1_bc zeptdux df689zpj
+gmmvi_exp1_bc zeptfux j7424u9w
+gmmvi_exp1_bc zeptrux yat4c313
+gmmvi_exp1_bc zepydux svjnb1fn
+gmmvi_exp1_bc zepyfux oce2szn9
+gmmvi_exp1_bc zepyrux 8y63z3ca
+gmmvi_exp1_bcmb sepidux 9qqtxy2o
+gmmvi_exp1_bcmb sepifux 4d7nf2sd
+gmmvi_exp1_bcmb sepirux dvswdn39
+gmmvi_exp1_bcmb septdux xjozx2m1
+gmmvi_exp1_bcmb septfux xoxmi42e
+gmmvi_exp1_bcmb septrux i3xx3mh7
+gmmvi_exp1_bcmb sepydux py2pqff4
+gmmvi_exp1_bcmb sepyfux 6297gx82
+gmmvi_exp1_bcmb sepyrux 7qyq76zi
+gmmvi_exp1_bcmb zepidux 194iuoqs
+gmmvi_exp1_bcmb zepifux 388qtdwb
+gmmvi_exp1_bcmb zepirux vgqo44jj
+gmmvi_exp1_bcmb zeptdux 9uyt3s2r
+gmmvi_exp1_bcmb zeptfux affahmo1
+gmmvi_exp1_bcmb zeptrux 18lxz8tu
+gmmvi_exp1_bcmb zepydux gmdz0x1f
+gmmvi_exp1_bcmb zepyfux t66ud5g5
+gmmvi_exp1_bcmb zepyrux 312887r2
+gmmvi_exp1_wine sepidux u1hjl9yi
+gmmvi_exp1_wine sepifux fx6qczi5
+gmmvi_exp1_wine sepirux 0rzhkzhg
+gmmvi_exp1_wine septdux use1w8ci
+gmmvi_exp1_wine septfux ok8g3s61
+gmmvi_exp1_wine septrux bysjraaj
+gmmvi_exp1_wine sepydux dcfc656i
+gmmvi_exp1_wine sepyfux sczw748y
+gmmvi_exp1_wine sepyrux 1jydd6n6
+gmmvi_exp1_wine zepidux 9v4ldlrw
+gmmvi_exp1_wine zepifux 6tmmr88e
+gmmvi_exp1_wine zepirux azzq358t
+gmmvi_exp1_wine zeptdux fclk51e3
+gmmvi_exp1_wine zeptfux 0gmpe8tl
+gmmvi_exp1_wine zeptrux ilkm23h7
+gmmvi_exp1_wine zepydux h5zf2nkj
+gmmvi_exp1_wine zepyfux 7fnyj10z
+gmmvi_exp1_wine zepyrux urhh6w8z
