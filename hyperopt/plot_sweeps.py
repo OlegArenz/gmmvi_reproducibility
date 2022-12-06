@@ -70,7 +70,7 @@ def best_elbo_per_choice(experiments, choices):
 
 
 if __name__ == "__main__":
-    best_elbos = best_elbo_per_choice(["gmmvi_exp1_wine", "gmmvi_exp1_bc", "gmmvi_exp1_bcmb"], "siytfdr")
+    best_elbos = best_elbo_per_choice(["gmmvi_exp1_wine", "gmmvi_exp1_bc", "gmmvi_exp1_bcmb"], "y") #"siytfdr")
 
 
     plot_list(["gmmvi_exp1_wine/septrux", "gmmvi_exp1_wine/sepyrux", "gmmvi_exp1_wine/sepirux"])
