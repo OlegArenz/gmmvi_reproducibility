@@ -1,5 +1,5 @@
 entity: joa
-project: gmmvi_exp1_bc
+project: gmmvi_exp2_gmm
 program: wandb_sweep.py
 name: exp2_gmm20_semtrun
 command:
