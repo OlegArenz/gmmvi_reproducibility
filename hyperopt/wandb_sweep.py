@@ -69,7 +69,8 @@ class WandbWorker:
         entropy = output_dict["entropy"]
         elbo = -output_dict["-elbo"]
         num_fevals = self.gmmvi_runner.gmmvi.sample_db.num_samples_written.numpy()
-        if entropy - self.initial_entropy > self.gmmvi_runner.gmmvi.sample_selector.target_distribtion.get_num_dimensions():
+        if (entropy - self.initial_entropy) > \
+                self.gmmvi_runner.gmmvi.sample_selector.target_distribution.get_num_dimensions():
             print("Early stopping due to bad conditioning")
             return True
 
