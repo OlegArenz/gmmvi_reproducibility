@@ -7,15 +7,15 @@ gmmvi_exp1_bc septrux pninka33
 gmmvi_exp1_bc sepydux wwglxkf5
 gmmvi_exp1_bc sepyfux gkaqiu71
 gmmvi_exp1_bc sepyrux x3qljxj0
-gmmvi_exp1_bc zepidux u7zdqfm2
-gmmvi_exp1_bc zepifux fd7nanp4
-gmmvi_exp1_bc zepirux 15i2webr
-gmmvi_exp1_bc zeptdux df689zpj
-gmmvi_exp1_bc zeptfux j7424u9w
-gmmvi_exp1_bc zeptrux yat4c313
-gmmvi_exp1_bc zepydux svjnb1fn
-gmmvi_exp1_bc zepyfux oce2szn9
-gmmvi_exp1_bc zepyrux 8y63z3ca
+gmmvi_exp1_bc zepidux 881y9ceh
+gmmvi_exp1_bc zepifux kosi180c
+gmmvi_exp1_bc zepirux 52es0izm
+gmmvi_exp1_bc zeptdux ewjo0sb1
+gmmvi_exp1_bc zeptfux g9139dnl
+gmmvi_exp1_bc zeptrux 5me5ftq4
+gmmvi_exp1_bc zepydux 926afwnc
+gmmvi_exp1_bc zepyfux 46x1i1ir
+gmmvi_exp1_bc zepyrux lvp83idn
 gmmvi_exp1_bcmb sepidux 9qqtxy2o
 gmmvi_exp1_bcmb sepifux 4d7nf2sd
 gmmvi_exp1_bcmb sepirux dvswdn39
@@ -25,15 +25,15 @@ gmmvi_exp1_bcmb septrux i3xx3mh7
 gmmvi_exp1_bcmb sepydux py2pqff4
 gmmvi_exp1_bcmb sepyfux 6297gx82
 gmmvi_exp1_bcmb sepyrux 7qyq76zi
-gmmvi_exp1_bcmb zepidux 194iuoqs
-gmmvi_exp1_bcmb zepifux 388qtdwb
-gmmvi_exp1_bcmb zepirux vgqo44jj
-gmmvi_exp1_bcmb zeptdux 9uyt3s2r
-gmmvi_exp1_bcmb zeptfux affahmo1
-gmmvi_exp1_bcmb zeptrux 18lxz8tu
-gmmvi_exp1_bcmb zepydux gmdz0x1f
-gmmvi_exp1_bcmb zepyfux t66ud5g5
-gmmvi_exp1_bcmb zepyrux 312887r2
+gmmvi_exp1_bcmb zepidux 42cj0whn
+gmmvi_exp1_bcmb zepifux 9p2s17bc
+gmmvi_exp1_bcmb zepirux evlrjo44
+gmmvi_exp1_bcmb zeptdux qy7wez34
+gmmvi_exp1_bcmb zeptfux ijgr2kh5
+gmmvi_exp1_bcmb zeptrux z37pij38
+gmmvi_exp1_bcmb zepydux 9qsuc9dp
+gmmvi_exp1_bcmb zepyfux pwhd5vlz
+gmmvi_exp1_bcmb zepyrux cmwqbpxp
 gmmvi_exp1_wine sepidux u1hjl9yi
 gmmvi_exp1_wine sepifux fx6qczi5
 gmmvi_exp1_wine sepirux 0rzhkzhg
@@ -52,45 +52,27 @@ gmmvi_exp1_wine zeptrux ilkm23h7
 gmmvi_exp1_wine zepydux h5zf2nkj
 gmmvi_exp1_wine zepyfux 7fnyj10z
 gmmvi_exp1_wine zepyrux urhh6w8z
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepidux.yml 881y9ceh
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepifux.yml kosi180c
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepirux.yml 52es0izm
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptdux.yml ewjo0sb1
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptfux.yml g9139dnl
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zeptrux.yml 5me5ftq4
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepydux.yml 926afwnc
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyfux.yml 46x1i1ir
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer/zepyrux.yml lvp83idn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepidux.yml 42cj0whn
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepifux.yml 9p2s17bc
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepirux.yml evlrjo44
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptdux.yml qy7wez34
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptfux.yml ijgr2kh5
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zeptrux.yml z37pij38
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepydux.yml 9qsuc9dp
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepyfux.yml pwhd5vlz
-configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb/zepyrux.yml cmwqbpxp
-configs/experiments/exp2 (multimodal targets)/gmm20/samtrog.yml i10rjqon
-configs/experiments/exp2 (multimodal targets)/gmm20/samtron.yml n1yug8et
-configs/experiments/exp2 (multimodal targets)/gmm20/samtrox.yml insjf504
-configs/experiments/exp2 (multimodal targets)/gmm20/samtrug.yml ajcntz1z
-configs/experiments/exp2 (multimodal targets)/gmm20/samtrun.yml 6s1s7020
-configs/experiments/exp2 (multimodal targets)/gmm20/samtrux.yml hh12ypxq
-configs/experiments/exp2 (multimodal targets)/gmm20/saptrog.yml gg0x4kdb
-configs/experiments/exp2 (multimodal targets)/gmm20/saptron.yml 1jtsnzhj
-configs/experiments/exp2 (multimodal targets)/gmm20/saptrox.yml 0c616lyh
-configs/experiments/exp2 (multimodal targets)/gmm20/saptrug.yml wlfnfoqb
-configs/experiments/exp2 (multimodal targets)/gmm20/saptrun.yml efope5af
-configs/experiments/exp2 (multimodal targets)/gmm20/saptrux.yml cfgwslrv
-configs/experiments/exp2 (multimodal targets)/gmm20/semtrog.yml c0l3kbe0
-configs/experiments/exp2 (multimodal targets)/gmm20/semtron.yml guvxyjan
-configs/experiments/exp2 (multimodal targets)/gmm20/semtrox.yml ts77vcyy
-configs/experiments/exp2 (multimodal targets)/gmm20/semtrug.yml kwks3jw5
-configs/experiments/exp2 (multimodal targets)/gmm20/semtrun.yml lqcp8qyt
-configs/experiments/exp2 (multimodal targets)/gmm20/semtrux.yml raqko2p6
-configs/experiments/exp2 (multimodal targets)/gmm20/septrog.yml haxnnnsa
-configs/experiments/exp2 (multimodal targets)/gmm20/septron.yml s69ryw6o
-configs/experiments/exp2 (multimodal targets)/gmm20/septrox.yml uxygp2k4
-configs/experiments/exp2 (multimodal targets)/gmm20/septrug.yml txcgliww
-configs/experiments/exp2 (multimodal targets)/gmm20/septrun.yml htpq5n5v
-configs/experiments/exp2 (multimodal targets)/gmm20/septrux.yml hjn0cky0
+gmmvi_exp2_gmm20 samtrog i10rjqon
+gmmvi_exp2_gmm20 samtron n1yug8et
+gmmvi_exp2_gmm20 samtrox insjf504
+gmmvi_exp2_gmm20 samtrug ajcntz1z
+gmmvi_exp2_gmm20 samtrun 6s1s7020
+gmmvi_exp2_gmm20 samtrux hh12ypxq
+gmmvi_exp2_gmm20 saptrog gg0x4kdb
+gmmvi_exp2_gmm20 saptron 1jtsnzhj
+gmmvi_exp2_gmm20 saptrox 0c616lyh
+gmmvi_exp2_gmm20 saptrug wlfnfoqb
+gmmvi_exp2_gmm20 saptrun efope5af
+gmmvi_exp2_gmm20 saptrux cfgwslrv
+gmmvi_exp2_gmm20 semtrog c0l3kbe0
+gmmvi_exp2_gmm20 semtron guvxyjan
+gmmvi_exp2_gmm20 semtrox ts77vcyy
+gmmvi_exp2_gmm20 semtrug kwks3jw5
+gmmvi_exp2_gmm20 semtrun lqcp8qyt
+gmmvi_exp2_gmm20 semtrux raqko2p6
+gmmvi_exp2_gmm20 septrog haxnnnsa
+gmmvi_exp2_gmm20 septron s69ryw6o
+gmmvi_exp2_gmm20 septrox uxygp2k4
+gmmvi_exp2_gmm20 septrug txcgliww
+gmmvi_exp2_gmm20 septrun htpq5n5v
+gmmvi_exp2_gmm20 septrux hjn0cky0
