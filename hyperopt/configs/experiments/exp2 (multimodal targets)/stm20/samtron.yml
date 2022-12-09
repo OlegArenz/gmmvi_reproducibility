@@ -1,0 +1,83 @@
+entity: joa
+project: gmmvi_exp2_stm
+program: wandb_sweep.py
+name: exp2_stm20_samtron
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - "--algorithm_id"
+  - "samtron"
+  - "--experiment_id"
+  - "stm20"
+  - "--sweep_config"
+  - "configs/experiments/exp2 (multimodal targets)/stm20/samtron.yml"   # Should reference _this_ file
+  - "--max_fevals"
+  - "10000000"
+  - "--max_seconds"
+  - "3600"
+
+method: bayes
+
+metric:
+  name: -elbo
+  goal: minimize
+
+parameters:
+
+  num_component_adapter_config.add_iters:
+    min: 1
+    max: 100
+
+  num_component_adapter.del_iters:
+    min: 10
+    max: 100
+
+  num_component_adapter.num_prior_samples:
+    min: 0
+    max: 1000
+
+  sample_selector_config.desired_samples_per_component:
+    min: 1
+    max: 1000
+
+  sample_selector_config.ratio_reused_samples_to_desired:
+    distribution: uniform
+    min: 1
+    max: 3
+
+  component_stepsize_adapter_config.initial_stepsize:
+    distribution: log_uniform_values
+    min: 1e-5
+    max: 1.
+
+  component_stepsize_adapter_config.min_stepsize:
+    distribution: log_uniform_values
+    min: 1e-5
+    max: 1e-2
+
+  component_stepsize_adapter_config.max_stepsize:
+    distribution: log_uniform_values
+    min: 1e-2
+    max: 1.
+
+  model_initialization.num_initial_components:
+    min: 1
+    max: 100
+
+  weight_stepsize_adapter_config.initial_stepsize:
+    distribution: log_uniform_values
+    min: 1e-8
+    max: 10.
+
+  weight_stepsize_adapter_config.min_stepsize:
+    distribution: log_uniform_values
+    min: 1e-8
+    max: 1e-1
+
+  weight_stepsize_adapter_config.max_stepsize:
+    distribution: log_uniform_values
+    min: 1e-1
+    max: 10.
+
+
