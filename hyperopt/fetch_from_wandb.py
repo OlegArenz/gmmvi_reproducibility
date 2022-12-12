@@ -6,6 +6,8 @@ import pandas as pd
 import pathlib
 from tqdm import tqdm
 
+api = wandb.Api(timeout=30)
+
 
 def summarize_sweep(sweep):
     summary_list, config_list, name_list, elbo_list, history_list = [], [], [], [], []
@@ -39,7 +41,7 @@ def summarize_sweep(sweep):
     return summary_list, config_list, name_list, history_list, elbo_list
 
 
-def process_sweep(api, group_name, project_names, sweep_names):
+def process_sweep(group_name, project_names, sweep_names):
     for project_name in project_names:
         print(f"processing project {project_name}")
         full_project_name = f"gmmvi_{project_name}"
@@ -88,7 +90,6 @@ def get_sweep_ids(project_name):
 
 
 if __name__ == "__main__":
-    api = wandb.Api(timeout=30)
 
     process_sweep(api, group_name="joa", project_names=["exp1_wine", "exp1_bc", "exp1_bcmb"],
                   sweep_names=[#"zepyrux", "zepyfux", "zepydux",
