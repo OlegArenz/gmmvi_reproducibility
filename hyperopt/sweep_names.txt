@@ -52,30 +52,30 @@ gmmvi_exp1_wine zeptrux ilkm23h7
 gmmvi_exp1_wine zepydux h5zf2nkj
 gmmvi_exp1_wine zepyfux 7fnyj10z
 gmmvi_exp1_wine zepyrux urhh6w8z
-gmmvi_exp2_gmm20 samtrog i10rjqon
-gmmvi_exp2_gmm20 samtrox insjf504
-gmmvi_exp2_gmm20 samtrug ajcntz1z
-gmmvi_exp2_gmm20 samtrux hh12ypxq
-gmmvi_exp2_gmm20 saptrog gg0x4kdb
-gmmvi_exp2_gmm20 saptrox 0c616lyh
-gmmvi_exp2_gmm20 saptrug wlfnfoqb
-gmmvi_exp2_gmm20 saptrux cfgwslrv
-gmmvi_exp2_gmm20 semtrog c0l3kbe0
-gmmvi_exp2_gmm20 semtrox ts77vcyy
-gmmvi_exp2_gmm20 semtrug kwks3jw5
-gmmvi_exp2_gmm20 semtrux raqko2p6
-gmmvi_exp2_gmm20 septrog haxnnnsa
-gmmvi_exp2_gmm20 septrox uxygp2k4
-gmmvi_exp2_gmm20 septrug txcgliww
-gmmvi_exp2_gmm20 septrux hjn0cky0
-gmmvi_exp2_gmm20 samtron 0c5f2wvs
-gmmvi_exp2_gmm20 samtrun 7rqvkgme
-gmmvi_exp2_gmm20 saptron b0tofx6c
-gmmvi_exp2_gmm20 saptrun 8mxln8fh
-gmmvi_exp2_gmm20 semtron avr8it2a
-gmmvi_exp2_gmm20 semtrun paje8yi3
-gmmvi_exp2_gmm20 septron 8743pa8w
-gmmvi_exp2_gmm20 septrun 5s02jhbe
+gmmvi_exp2_gmm samtrog i10rjqon
+gmmvi_exp2_gmm samtrox insjf504
+gmmvi_exp2_gmm samtrug ajcntz1z
+gmmvi_exp2_gmm samtrux hh12ypxq
+gmmvi_exp2_gmm saptrog gg0x4kdb
+gmmvi_exp2_gmm saptrox 0c616lyh
+gmmvi_exp2_gmm saptrug wlfnfoqb
+gmmvi_exp2_gmm saptrux cfgwslrv
+gmmvi_exp2_gmm semtrog c0l3kbe0
+gmmvi_exp2_gmm semtrox ts77vcyy
+gmmvi_exp2_gmm semtrug kwks3jw5
+gmmvi_exp2_gmm semtrux raqko2p6
+gmmvi_exp2_gmm septrog haxnnnsa
+gmmvi_exp2_gmm septrox uxygp2k4
+gmmvi_exp2_gmm septrug txcgliww
+gmmvi_exp2_gmm septrux hjn0cky0
+gmmvi_exp2_gmm samtron 0c5f2wvs
+gmmvi_exp2_gmm samtrun 7rqvkgme
+gmmvi_exp2_gmm saptron b0tofx6c
+gmmvi_exp2_gmm saptrun 8mxln8fh
+gmmvi_exp2_gmm semtron avr8it2a
+gmmvi_exp2_gmm semtrun paje8yi3
+gmmvi_exp2_gmm septron 8743pa8w
+gmmvi_exp2_gmm septrun 5s02jhbe
 gmmvi_exp2_stm samtrog 2ucrxyyl
 gmmvi_exp2_stm samtron o00iztrg
 gmmvi_exp2_stm samtrox u2uah6wi
@@ -98,51 +98,3 @@ gmmvi_exp2_stm septron nopjbnxz
 gmmvi_exp2_stm septrox 5linij5t
 gmmvi_exp2_stm septrug vv0cg2qo
 gmmvi_exp2_stm septrun g5wu3251
-configs/experiments/exp2 (multimodal targets)/planar4/samtrog.yml caj41t17
-configs/experiments/exp2 (multimodal targets)/planar4/samtron.yml fkbfcsh5
-configs/experiments/exp2 (multimodal targets)/planar4/samtrox.yml trd16bbv
-configs/experiments/exp2 (multimodal targets)/planar4/samtrug.yml r19v8u9w
-configs/experiments/exp2 (multimodal targets)/planar4/samtrun.yml 0mn5e406
-configs/experiments/exp2 (multimodal targets)/planar4/samtrux.yml b511r2so
-configs/experiments/exp2 (multimodal targets)/planar4/saptrog.yml ujgchml7
-configs/experiments/exp2 (multimodal targets)/planar4/saptron.yml 6uq9hdt9
-configs/experiments/exp2 (multimodal targets)/planar4/saptrox.yml lgbm9zqy
-configs/experiments/exp2 (multimodal targets)/planar4/saptrug.yml seldzfey
-configs/experiments/exp2 (multimodal targets)/planar4/saptrun.yml 176fcop1
-configs/experiments/exp2 (multimodal targets)/planar4/saptrux.yml eegwrevt
-configs/experiments/exp2 (multimodal targets)/planar4/semtrog.yml jcjy0kqj
-configs/experiments/exp2 (multimodal targets)/planar4/semtron.yml uuyr1wwy
-configs/experiments/exp2 (multimodal targets)/planar4/semtrox.yml ghebr9lf
-configs/experiments/exp2 (multimodal targets)/planar4/semtrug.yml nycfl10k
-configs/experiments/exp2 (multimodal targets)/planar4/semtrun.yml yoawg4eh
-configs/experiments/exp2 (multimodal targets)/planar4/semtrux.yml qgrrstfl
-configs/experiments/exp2 (multimodal targets)/planar4/septrog.yml ktshiuwx
-configs/experiments/exp2 (multimodal targets)/planar4/septron.yml qq4skuer
-configs/experiments/exp2 (multimodal targets)/planar4/septrox.yml 5f4ji1k7
-configs/experiments/exp2 (multimodal targets)/planar4/septrug.yml 71estcl7
-configs/experiments/exp2 (multimodal targets)/planar4/septrun.yml jiwwrs0v
-configs/experiments/exp2 (multimodal targets)/planar4/septrux.yml mks0b8op
-configs/experiments/exp2 (multimodal targets)/planar4/samtron.yml uew24j78
-configs/experiments/exp2 (multimodal targets)/planar4/samtrun.yml ic5jdlfn
-configs/experiments/exp2 (multimodal targets)/planar4/saptron.yml rpjgtf6r
-configs/experiments/exp2 (multimodal targets)/planar4/saptrun.yml h4ixpfzf
-configs/experiments/exp2 (multimodal targets)/planar4/semtron.yml x9fs6507
-configs/experiments/exp2 (multimodal targets)/planar4/semtrun.yml 15oyh8tv
-configs/experiments/exp2 (multimodal targets)/planar4/septron.yml bviatiws
-configs/experiments/exp2 (multimodal targets)/planar4/septrun.yml vpapwph5
-configs/experiments/exp2 (multimodal targets)/planar4/samtrog.yml obo8beyc
-configs/experiments/exp2 (multimodal targets)/planar4/samtrox.yml pnyj6v5k
-configs/experiments/exp2 (multimodal targets)/planar4/samtrug.yml qtyf37iz
-configs/experiments/exp2 (multimodal targets)/planar4/samtrux.yml b7es0ei8
-configs/experiments/exp2 (multimodal targets)/planar4/saptrog.yml gftdsmrx
-configs/experiments/exp2 (multimodal targets)/planar4/saptrox.yml h880so01
-configs/experiments/exp2 (multimodal targets)/planar4/saptrug.yml x2rhaxlz
-configs/experiments/exp2 (multimodal targets)/planar4/saptrux.yml rdpyqk36
-configs/experiments/exp2 (multimodal targets)/planar4/semtrog.yml bdldq19m
-configs/experiments/exp2 (multimodal targets)/planar4/semtrox.yml vdur9zk3
-configs/experiments/exp2 (multimodal targets)/planar4/semtrug.yml j5er2d17
-configs/experiments/exp2 (multimodal targets)/planar4/semtrux.yml qdlifgx7
-configs/experiments/exp2 (multimodal targets)/planar4/septrog.yml 503eug98
-configs/experiments/exp2 (multimodal targets)/planar4/septrox.yml oa6meb6b
-configs/experiments/exp2 (multimodal targets)/planar4/septrug.yml 9u97gjbw
-configs/experiments/exp2 (multimodal targets)/planar4/septrux.yml vy7a9a0v
