@@ -15,6 +15,9 @@ def summarize_sweep(sweep):
         if len(expensive_metrics) < 10:
             print(f"\n skipping run {run.name} because it only has {len(expensive_metrics)} elbo evaluations")
             continue
+        if expensive_metrics["-elbo"].min() < -1000:
+            print(f"\n skipping run {run.name} because it suffered from bad conditioning")
+            continue
         summary_list.append(run.summary._json_dict)
 
         # add runtime to the dataframe
@@ -39,14 +42,15 @@ def summarize_sweep(sweep):
     return summary_list, config_list, name_list, history_list, elbo_list
 
 
-def process_sweep(api, group_name, project_names, sweep_names):
+def fetch_sweeps(group_name, project_names, sweep_names):
+    api = wandb.Api(timeout=30)
     for project_name in project_names:
         print(f"processing project {project_name}")
         full_project_name = f"gmmvi_{project_name}"
         sweep_name_to_id = get_sweep_ids(full_project_name)
         for sweep_name in sweep_names:
             print(f"processing sweep {sweep_name}")
-            path = os.path.join("results", full_project_name, sweep_name)
+            path = os.path.join("results", project_name, sweep_name)
             best_run_path = pathlib.Path(os.path.join(path, "best_runs"))
             best_run_path.mkdir(parents=True, exist_ok=True)
             fully_fetched = pathlib.Path(os.path.join(path, "FETCHED"))
@@ -87,14 +91,4 @@ def get_sweep_ids(project_name):
     return sweep_name_to_id
 
 
-if __name__ == "__main__":
-    api = wandb.Api(timeout=30)
 
-    process_sweep(api, group_name="joa", project_names=["exp1_wine", "exp1_bc", "exp1_bcmb"],
-                  sweep_names=[#"zepyrux", "zepyfux", "zepydux",
-                               #"zeptrux", "zeptfux", "zeptdux",
-                               #"zepirux", "zepifux", "zepidux",
-                               "sepyrux", "sepyfux", "sepydux",
-                               "septrux", "septfux", "septdux",
-                               "sepirux", "sepifux", "sepidux"])
-    print("done")
