@@ -6,13 +6,15 @@ import pandas as pd
 import pathlib
 from tqdm import tqdm
 
+api = wandb.Api(timeout=30)
+
 
 def summarize_sweep(sweep):
     summary_list, config_list, name_list, elbo_list, history_list = [], [], [], [], []
     for run in tqdm(sweep.runs):
         cheap_metrics = pd.DataFrame(run.scan_history(keys=["_step", "walltime", "num_samples", "num_components"]))
         expensive_metrics = pd.DataFrame(run.scan_history(keys=["-elbo", "entropy", "target_density", "_step"]))
-        if len(expensive_metrics) < 10:
+        if len(expensive_metrics) < 3:
             print(f"\n skipping run {run.name} because it only has {len(expensive_metrics)} elbo evaluations")
             continue
         if expensive_metrics["-elbo"].min() < -1000:
@@ -43,7 +45,6 @@ def summarize_sweep(sweep):
 
 
 def fetch_sweeps(group_name, project_names, sweep_names):
-    api = wandb.Api(timeout=30)
     for project_name in project_names:
         print(f"processing project {project_name}")
         full_project_name = f"gmmvi_{project_name}"
@@ -59,7 +60,8 @@ def fetch_sweeps(group_name, project_names, sweep_names):
             sweep = api.sweep(f"{group_name}/{full_project_name}/{sweep_id}")
             if f"{project_name}_{sweep_name}" != sweep.name:
                 print(f"{project_name}_{sweep_name} vs {sweep.name}")
-            assert (f"{project_name}_{sweep_name}" == sweep.name)
+            if not (f"{project_name}_{sweep_name}" == sweep.name):
+                print(f"name mismatch {project_name}_{sweep_name} vs {sweep.name}")
 
             if os.path.exists(fully_fetched):
                 print(f"sweep {sweep_name} was already fetched")
