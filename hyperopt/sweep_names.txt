@@ -197,3 +197,9 @@ configs/experiments/exp2 (multimodal targets)/planar4/septrog.yml 503eug98
 configs/experiments/exp2 (multimodal targets)/planar4/septrox.yml oa6meb6b
 configs/experiments/exp2 (multimodal targets)/planar4/septrug.yml 9u97gjbw
 configs/experiments/exp2 (multimodal targets)/planar4/septrux.yml vy7a9a0v
+configs/experiments/exp2\ \(multimodal\ targets\)/stm20/septrux.yml septrux.yml
+configs/experiments/exp2\ \(multimodal\ targets\)/stm20/semtrun.yml semtrun.yml
+configs/experiments/exp2\ \(multimodal\ targets\)/stm20/semtrun.yml semtrun.yml
+configs/experiments/exp2 (multimodal targets)/stm20/semtrun.yml t7bkon1e
+configs/experiments/exp2 (multimodal targets)/stm20/septrux.yml 1f7zbxnj
+configs/experiments/exp2 (multimodal targets)/stm20/septron.yml 0g32573r
