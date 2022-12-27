@@ -1,0 +1,70 @@
+---
+# Slurm config (optional)
+name: "SLURM"   # MUST BE "SLURM"
+
+# Required
+account: "project01800"
+partition: "ignored"
+job-name: "stkr"    # this will be the experiment's name in slurm
+
+# Required - Cluster Specific
+num_parallel_jobs: 120
+ntasks: 1
+cpus-per-task: 3
+time: 2-00:00:00
+
+path_to_template: "clusterwork_slurm.sbatch"
+
+---
+name: "DEFAULT"
+
+# Required: Can also be set in DEFAULT
+path: "/work/scratch/j_arenz/exp3_hyperopt/zamtrux/"   # location to save results in
+iterations: 100000
+repetitions: 1 # number of times one set of parameters is run
+reps_per_job: 1
+reps_in_parallel: 1 # need to be 1 in order for wandb to work properly
+
+algorithm_id: "ZAMTRUX"
+
+params:
+    model_initialization:
+        num_initial_components: 1
+
+    num_component_adapter_config:
+        del_iters: 100
+        add_iters: 30
+        num_prior_samples: 0
+
+    sample_selector_config:
+        desired_samples_per_component: 600
+        ratio_reused_samples_to_desired: 1.61803
+
+    component_stepsize_adapter_config:
+        initial_stepsize: 0.1
+        min_stepsize: 0.001
+        max_stepsize: 1.
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 1.
+
+wandb:
+    project: gmmvi-exp3
+
+---
+name: "BC"
+
+experiment_id: "breast_cancer"
+
+list:
+    num_component_adapter_config:
+      del_iters: [100, 100]
+      add_iters: [25, 50]
+
+grid:
+    sample_selector_config:
+      desired_samples_per_component: [600, 800, 1000]
+      ratio_reused_samples_to_desired: [0., 1.61803]
+
+wandb:
+    group: "zamtrux_bc"
