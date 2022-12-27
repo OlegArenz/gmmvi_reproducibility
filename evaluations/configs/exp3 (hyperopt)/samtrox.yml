@@ -13,7 +13,7 @@ ntasks: 1
 cpus-per-task: 3
 time: 2-00:00:00
 
-path_to_template: ",clusterwork_slurm.sbatch"
+path_to_template: "clusterwork_slurm.sbatch"
 
 ---
 name: "DEFAULT"
