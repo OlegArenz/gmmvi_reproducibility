@@ -71,3 +71,23 @@ grid:
 
 wandb:
     group: "samyrox_bc"
+---
+name: "GC"
+
+experiment_id: "german_credit"
+
+list:
+    num_component_adapter_config:
+      del_iters: [100, 100]
+      add_iters: [25, 50]
+
+grid:
+    sample_selector_config:
+      desired_samples_per_component: [100, 250, 500]
+      ratio_reused_samples_to_desired: [1.61803, 2.5]
+
+    component_stepsize_adapter_config:
+        min_stepsize: [0.001, 0.0001]
+
+wandb:
+    group: "samyrox_gc"

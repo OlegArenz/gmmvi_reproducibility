@@ -63,3 +63,20 @@ grid:
 
 wandb:
     group: "sepyrux_bc"
+---
+name: "GC"
+
+experiment_id: "german_credit"
+
+grid:
+    model_initialization:
+        num_initial_components: [50, 100, 150, 200]
+
+    sample_selector_config:
+      desired_samples_per_component: [600, 800, 1000]
+
+    component_stepsize_adapter_config:
+        min_stepsize: [0.001, 0.0001]
+
+wandb:
+    group: "sepyrux_gc"

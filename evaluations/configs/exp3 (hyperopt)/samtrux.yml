@@ -71,3 +71,23 @@ grid:
 
 wandb:
     group: "samtrux_bc"
+---
+name: "GC"
+
+experiment_id: "german_credit"
+
+list:
+    num_component_adapter_config:
+      del_iters: [100, 100]
+      add_iters: [25, 50]
+
+grid:
+    sample_selector_config:
+      desired_samples_per_component: [100, 250, 400]
+      ratio_reused_samples_to_desired: [0., 1.61803]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [0.85, 1.]
+
+wandb:
+    group: "samtrux_gc"
