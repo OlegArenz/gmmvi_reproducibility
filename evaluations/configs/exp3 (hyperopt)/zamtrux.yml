@@ -66,5 +66,8 @@ grid:
       desired_samples_per_component: [600, 800, 1000]
       ratio_reused_samples_to_desired: [0., 1.61803]
 
+    component_stepsize_adapter_config:
+      initial_stepsize:	[1., 0.1]
+
 wandb:
     group: "zamtrux_bc"
