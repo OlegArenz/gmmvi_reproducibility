@@ -12,9 +12,9 @@ job-name: "sepyrux"    # this will be the experiment's name in slurm
 num_parallel_jobs: 120
 ntasks: 1
 cpus-per-task: 6
-time: 1-00:00:00
+time: 0-06:00:00
 
-path_to_template: "cluster/experiments/clusterwork_slurm.sbatch"
+path_to_template: "clusterwork_slurm.sbatch"
 
 ---
 name: "DEFAULT"
@@ -94,7 +94,7 @@ params:
 wandb:
   group: "sepyrux_eval"
 ---
-name: "BC_MB"
+name: "BCMB"
 
 experiment_id: "breast_cancer_mb"
 

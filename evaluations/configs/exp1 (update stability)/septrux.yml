@@ -12,9 +12,9 @@ job-name: "septrux"    # this will be the experiment's name in slurm
 num_parallel_jobs: 120
 ntasks: 1
 cpus-per-task: 6
-time: 1-00:00:00
+time: 0-06:00:00
 
-path_to_template: "cluster/experiments/clusterwork_slurm.sbatch"
+path_to_template: "clusterwork_slurm.sbatch"
 
 ---
 name: "DEFAULT"
@@ -117,9 +117,9 @@ params:
     min_stepsize: 0.0002766896262917454
     max_stepsize: 0.02362451925190881
 
-    mmd_evaluation_config:
-      alpha: 20.
-      sample_dir: "experiments/target_distributions/tests/breastcancer_gt_10k.npy"
+  mmd_evaluation_config:
+    alpha: 20.
+    sample_dir: "experiments/target_distributions/tests/breastcancer_gt_10k.npy"
 
   start_seed: 0
 
