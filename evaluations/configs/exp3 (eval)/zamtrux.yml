@@ -70,3 +70,22 @@ params:
 
 wandb:
     group: "zamtrux_bc"
+---
+name: "GC"
+
+experiment_id: "german_credit"
+
+params:
+    num_component_adapter_config:
+      del_iters: 100
+      add_iters: 50
+
+    sample_selector_config:
+      desired_samples_per_component: 600
+      ratio_reused_samples_to_desired: 0.
+
+    component_stepsize_adapter_config:
+      initial_stepsize: 0.05
+
+wandb:
+    group: "zamtrux_gc"

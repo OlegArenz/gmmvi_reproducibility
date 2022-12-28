@@ -36,7 +36,11 @@ def fetch_exp2_hyperopt(project, foldername, group_names):
 
 
 if __name__ == "__main__":
-    fetch_exp2_hyperopt("amortizedvips/gmmvi-exp3", "BC",
-                        ["samtron_bc", "samtrux_bc", "samtrox_bc",
-                         "samyron_bc", "samyrux_bc", "samyrox_bc",
-                         "zamtrux_bc", "sepyfux_bc", "sepyrux_bc"])
+    #fetch_exp2_hyperopt("amortizedvips/gmmvi-exp3", "BC",
+    #                    ["samtron_bc", "samtrux_bc", "samtrox_bc",
+    #                     "samyron_bc", "samyrux_bc", "samyrox_bc",
+    #                     "zamtrux_bc", "sepyfux_bc", "sepyrux_bc"])
+    fetch_exp2_hyperopt("amortizedvips/gmmvi-exp3", "GC",
+                        ["samtron_gc", "samtrux_gc", "samtrox_gc",
+                         "samyron_gc", "samyrux_gc", "samyrox_gc",
+                         "zamtrux_gc", "sepyfux_gc", "sepyrux_gc"])

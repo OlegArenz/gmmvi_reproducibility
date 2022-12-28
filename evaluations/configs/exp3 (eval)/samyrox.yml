@@ -70,3 +70,22 @@ params:
 
 wandb:
     group: "samyrox_bc"
+---
+name: "GC"
+
+experiment_id: "german_credit"
+
+params:
+    num_component_adapter_config:
+      del_iters: 100
+      add_iters: 25
+
+    sample_selector_config:
+      desired_samples_per_component: 100
+      ratio_reused_samples_to_desired: 2.5
+
+    component_stepsize_adapter_config:
+        min_stepsize: 0.001
+
+wandb:
+    group: "samyrox_gc"

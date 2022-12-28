@@ -45,19 +45,19 @@ wandb:
     project: gmmvi-exp3-eval
 
 ---
-name: "BC"
+name: "GC"
 
-experiment_id: "breast_cancer"
+experiment_id: "german_credit"
 
 params:
     model_initialization:
         num_initial_components: 50
 
     sample_selector_config:
-      desired_samples_per_component: 400
+      desired_samples_per_component: 200
 
     component_stepsize_adapter_config:
-        initial_stepsize: 0.001
+        initial_stepsize: 0.005
 
 wandb:
-    group: "sepyfux_bc"
+    group: "sepyfux_gc"
