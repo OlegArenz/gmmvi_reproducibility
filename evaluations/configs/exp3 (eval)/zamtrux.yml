@@ -66,7 +66,7 @@ params:
       ratio_reused_samples_to_desired: 0.
 
     component_stepsize_adapter_config:
-      initial_stepsize:	1.
+      initial_stepsize: 1.
 
 wandb:
     group: "zamtrux_bc"
