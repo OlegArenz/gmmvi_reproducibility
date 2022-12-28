@@ -11,7 +11,7 @@
 #SBATCH -n %%ntasks%%         # Number of tasks
 #SBATCH -c %%cpus-per-task%%  # Number of cores per task
 #SBATCH -t %%time%%             # 1:00:00 Hours, minutes and seconds, or '#SBATCH -t 10' - only minutes
-#SBATCH --mem-per-cpu=4000
+#SBATCH --mem-per-cpu=3900
 #SBATCH -C avx512
 # -------------------------------
 # Load the required modules
@@ -22,4 +22,4 @@ module load gcc python/3.8
 source ~/virtualenvs/gmmvi_test/bin/activate
 
 # Run on SLURM
-python3 %%python_script%% %%path_to_yaml_config%% -j $SLURM_ARRAY_TASK_ID %%cw_args%%
+python3 %%python_script%% "%%path_to_yaml_config%%" -j $SLURM_ARRAY_TASK_ID %%cw_args%%
