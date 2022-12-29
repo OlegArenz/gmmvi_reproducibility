@@ -101,3 +101,24 @@ grid:
 
 wandb:
     group: "sepyrux_bcmb"
+---
+name: "GC_mb"
+
+experiment_id: "german_credit_mb"
+
+grid:
+    model_initialization:
+        num_initial_components: [ 5 ]
+
+    sample_selector_config:
+      desired_samples_per_component: [700, 900, 1100]
+      ratio_reused_samples_to_desired: [1.61803]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [0.1, 0.85]
+
+    component_stepsize_adapter_config:
+      min_stepsize: [0.0001, 0.00005, 0.00001, 0.000005]
+
+wandb:
+    group: "sepyrux_gcmb"

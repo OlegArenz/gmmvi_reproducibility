@@ -114,3 +114,26 @@ grid:
 
 wandb:
     group: "samtrox_bcmb"
+---
+name: "GC_mb"
+
+experiment_id: "german_credit_mb"
+
+list:
+    num_component_adapter_config:
+      del_iters: [200]
+      add_iters: [250]
+
+grid:
+    sample_selector_config:
+      desired_samples_per_component: [100, 400, 600, 800]
+      ratio_reused_samples_to_desired: [1.61803]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [0.1, 0.01]
+
+    component_stepsize_adapter_config:
+      initial_stepsize: [0.1, 0.01]
+
+wandb:
+    group: "samtrox_gcmb"
