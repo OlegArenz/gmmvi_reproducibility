@@ -7,5 +7,5 @@ mkdir -p "tmp/"
 CONFFILE=$3_`basename "$FILE"`
 cp "$FILE" tmp/$CONFFILE
 sed -i "tmp/$CONFFILE" -e s/2-00:00:00/$2/
-python clusterwork.py "tmp/$CONFFILE" -e $3 -s
+python clusterwork.py "tmp/$CONFFILE" -e $3 -s -o
 echo $CONFFILE started

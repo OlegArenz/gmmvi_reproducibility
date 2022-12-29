@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -A project01800
+#SBATCH -A project01883
 #SBATCH -J wandb_sweep
 # Please use the complete path details :
 #SBATCH -o /work/scratch/j_arenz/wandb_sweeps/slurmlog/out_%A_%a.log
