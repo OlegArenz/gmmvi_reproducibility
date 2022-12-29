@@ -81,4 +81,4 @@ params:
       initial_stepsize: 0.001
 
 wandb:
-    group: "sepyfux_bcmb"
+    group: "sepyfux_bcmb2"

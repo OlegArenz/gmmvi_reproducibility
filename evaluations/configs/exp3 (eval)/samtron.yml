@@ -109,4 +109,4 @@ params:
       initial_stepsize: 0.1
 
 wandb:
-    group: "samtron_bcmb"
+    group: "samtron_bcmb2"

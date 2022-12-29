@@ -110,4 +110,4 @@ params:
       initial_stepsize: 0.01
 
 wandb:
-    group: "samtrux_bcmb"
+    group: "samtrux_bcmb2"

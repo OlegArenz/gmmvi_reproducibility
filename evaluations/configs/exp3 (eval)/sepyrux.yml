@@ -100,4 +100,4 @@ params:
       min_stepsize: 0.00001
 
 wandb:
-    group: "sepyrux_bcmb"
+    group: "sepyrux_bcmb2"

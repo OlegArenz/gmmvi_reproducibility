@@ -110,4 +110,4 @@ params:
       initial_stepsize: 0.00001
 
 wandb:
-    group: "samyrox_bcmb"
+    group: "samyrox_bcmb2"
