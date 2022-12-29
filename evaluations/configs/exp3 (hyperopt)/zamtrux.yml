@@ -91,3 +91,26 @@ grid:
 
 wandb:
     group: "zamtrux_gc"
+---
+name: "BC_mb"
+
+experiment_id: "breast_cancer_mb"
+
+list:
+    num_component_adapter_config:
+      del_iters: [200, 200]
+      add_iters: [250, 500]
+
+grid:
+    sample_selector_config:
+      desired_samples_per_component: [2800, 3600, 4200]
+      ratio_reused_samples_to_desired: [1.61803]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [0.1, 0.85]
+
+    component_stepsize_adapter_config:
+      initial_stepsize: [0.1, 0.001]
+
+wandb:
+    group: "zamtrux_bcmb"
