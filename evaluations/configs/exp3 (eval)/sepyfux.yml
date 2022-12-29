@@ -61,3 +61,24 @@ params:
 
 wandb:
     group: "sepyfux_gc"
+---
+name: "BC_mb"
+
+experiment_id: "breast_cancer_mb"
+
+params:
+    model_initialization:
+        num_initial_components: 5
+
+    sample_selector_config:
+      desired_samples_per_component: 900
+      ratio_reused_samples_to_desired: 1.61803
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 0.85
+
+    component_stepsize_adapter_config:
+      initial_stepsize: 0.001
+
+wandb:
+    group: "sepyfux_bcmb"
