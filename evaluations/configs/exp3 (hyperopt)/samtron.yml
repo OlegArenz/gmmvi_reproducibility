@@ -126,8 +126,8 @@ list:
 
 grid:
     sample_selector_config:
-      desired_samples_per_component: [100, 300, 600]
-      ratio_reused_samples_to_desired: [0., 1.61803]
+      desired_samples_per_component: [700, 900, 1200]
+      ratio_reused_samples_to_desired: [0.]
 
     component_stepsize_adapter_config:
       initial_stepsize: [0.1, 0.01]
