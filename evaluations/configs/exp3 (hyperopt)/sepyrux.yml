@@ -106,6 +106,12 @@ name: "GC_mb"
 
 experiment_id: "german_credit_mb"
 
+list:
+    component_stepsize_adapter_config:
+        initial_stepsize: [ 0.0001, 0.00005, 0.00001, 0.000005 ]
+        min_stepsize: [ 0.001, 0.0005, 0.0001, 0.00005 ]
+        max_stepsize: [ 0.1, 0.05, 0.01, 0.005 ]
+
 grid:
     model_initialization:
         num_initial_components: [ 5 ]
@@ -115,10 +121,7 @@ grid:
       ratio_reused_samples_to_desired: [0.]
 
     weight_stepsize_adapter_config:
-        initial_stepsize: [0.1, 0.85]
-
-    component_stepsize_adapter_config:
-      min_stepsize: [0.0001, 0.00005, 0.00001, 0.000005]
+        initial_stepsize: [ 0.05, 0.005 ]
 
 wandb:
     group: "sepyrux_gcmb"
