@@ -32,6 +32,8 @@ def fetch_exp3_hyperopt(project, foldername, group_names, metric="-elbo"):
                 best_elbo = this_elbo
                 best_run = i
         print(f"Run {best_run} has best elbo ({best_elbo})")
+        print(json.loads(runs[best_run].json_config))
+        print("----------------------------")
 
     for group_name in group_names:
         print(f"fetching {group_name}")
