@@ -139,3 +139,27 @@ grid:
 
 wandb:
     group: "zamtrux_gcmb"
+---
+name: "Planar4"
+
+experiment_id: "planar_robot_4"
+
+list:
+  num_component_adapter_config:
+    del_iters: [ 10, 25 ]
+    add_iters: [ 1, 25 ]
+
+grid:
+    sample_selector_config:
+        desired_samples_per_component: [200, 300, 400, 500]
+        ratio_reused_samples_to_desired: [0.]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [ 0.85 ]
+
+    model_initialization:
+      num_initial_components: [10, 100, 300]
+
+    max_database_size: [ 2000000 ]
+wandb:
+    group: "samtrux_planar_4"

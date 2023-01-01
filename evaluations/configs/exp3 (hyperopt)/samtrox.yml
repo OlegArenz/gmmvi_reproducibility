@@ -138,3 +138,27 @@ grid:
       add_iters: [250]
 wandb:
     group: "samtrox_gcmb"
+---
+name: "Planar4"
+
+experiment_id: "planar_robot_4"
+
+list:
+  num_component_adapter_config:
+    del_iters: [ 10, 25 ]
+    add_iters: [ 1, 25 ]
+
+grid:
+    sample_selector_config:
+        desired_samples_per_component: [100, 200]
+        ratio_reused_samples_to_desired: [0.]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [ 1., 0.1 ]
+
+    model_initialization:
+      num_initial_components: [10, 100, 300]
+
+    max_database_size: [ 2000000 ]
+wandb:
+    group: "samtrox_planar_4"

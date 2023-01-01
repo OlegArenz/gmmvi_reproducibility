@@ -120,3 +120,25 @@ grid:
 
 wandb:
     group: "sepyfux_gcmb"
+---
+name: "Planar4"
+
+experiment_id: "planar_robot_4"
+
+grid:
+    sample_selector_config:
+        desired_samples_per_component: [100, 150, 200]
+        ratio_reused_samples_to_desired: [0.]
+
+    component_stepsize_adapter_config:
+        initial_stepsize: [ 0.0001, 0.0005 ]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [ 0.85 ]
+
+    model_initialization:
+      num_initial_components: [10, 100, 200, 300]
+
+    max_database_size: [ 2000000 ]
+wandb:
+    group: "sepyfux_planar_4"
