@@ -156,10 +156,10 @@ grid:
     weight_stepsize_adapter_config:
         initial_stepsize: [ 5., 1. ]
 
-  component_stepsize_adapter_config:
-      initial_stepsize: [0.0001]
-      min_stepsize: [0.001]
-      max_stepsize: [0.1]
+    component_stepsize_adapter_config:
+        initial_stepsize: [0.0001]
+        min_stepsize: [0.001]
+        max_stepsize: [0.1]
 
     model_initialization:
       num_initial_components: [10, 100, 300]
