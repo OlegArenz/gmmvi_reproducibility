@@ -162,4 +162,4 @@ grid:
 
     max_database_size: [ 2000000 ]
 wandb:
-    group: "samtrux_planar_4"
+    group: "zamtrux_planar_4"

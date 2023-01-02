@@ -134,3 +134,26 @@ params:
     add_iters: 250
 wandb:
     group: "samtrux_gcmb"
+---
+name: "Planar4"
+
+experiment_id: "planar_robot_4"
+
+params:
+  num_component_adapter_config:
+    del_iters: 10
+    add_iters: 1
+
+  sample_selector_config:
+      desired_samples_per_component: 50
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 0.85
+
+  model_initialization:
+    num_initial_components: 300
+
+  max_database_size: 2000000
+wandb:
+    group: "samtrux_planar_4"
