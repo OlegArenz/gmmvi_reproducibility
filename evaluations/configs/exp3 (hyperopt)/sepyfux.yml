@@ -142,3 +142,24 @@ grid:
     max_database_size: [ 2000000 ]
 wandb:
     group: "sepyfux_planar_4"
+---
+name: "GMM20"
+
+experiment_id: "gmm20"
+
+grid:
+  component_stepsize_adapter_config:
+      initial_stepsize: [0.0001, 0.0005]
+
+  sample_selector_config:
+      desired_samples_per_component: [100, 200, 300]
+      ratio_reused_samples_to_desired: [0.]
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: [ 1. ]
+
+  model_initialization:
+    num_initial_components: [10, 25, 50, 100]
+
+wandb:
+    group: "sepyfux_gmm20"

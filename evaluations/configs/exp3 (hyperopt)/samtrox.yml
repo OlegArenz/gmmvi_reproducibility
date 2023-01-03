@@ -162,3 +162,26 @@ grid:
   max_database_size: [ 2000000 ]
 wandb:
     group: "samtrox_planar_4"
+---
+name: "GMM20"
+
+experiment_id: "gmm20"
+
+list:
+  num_component_adapter_config:
+    del_iters: [ 25, 100 ]
+    add_iters: [ 25, 30 ]
+
+grid:
+  sample_selector_config:
+      desired_samples_per_component: [100, 200, 300]
+      ratio_reused_samples_to_desired: [0.]
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: [ 1., 0.1 ]
+
+  model_initialization:
+    num_initial_components: [1, 5]
+
+wandb:
+    group: "samtrox_gmm20"
