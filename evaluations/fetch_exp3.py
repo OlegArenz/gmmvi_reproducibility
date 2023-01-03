@@ -59,7 +59,11 @@ if __name__ == "__main__":
     #                      "samyron_gcmb", "samyrux_gcmb", "samyrox_gcmb",
     #                      "zamtrux_gcmb", "sepyfux_gcmb", "sepyrux_gcmb"],
     #                     metric="elbo_fb:")
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "Planar4",
-                         ["samtron_planar_4", "samtrux_planar_4", "samtrox_planar_4",
-                          "samyron_planar_4", "samyrux_planar_4", "samyrox_planar_4",
-                          "zamtrux_planar_4", "sepyfux_planar_4", "sepyrux_planar_4"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "Planar4",
+    #                      ["samtron_planar_4", "samtrux_planar_4", "samtrox_planar_4",
+    #                       "samyron_planar_4", "samyrux_planar_4", "samyrox_planar_4",
+    #                       "zamtrux_planar_4", "sepyfux_planar_4", "sepyrux_planar_4"])
+    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GMM20",
+                         ["samtron_gmm20", "samtrux_gmm20", "samtrox_gmm20",
+                          "samyron_gmm20", "samyrux_gmm20", "samyrox_gmm20",
+                          "zamtrux_gmm20", "sepyfux_gmm20", "sepyrux_gmm20"])
