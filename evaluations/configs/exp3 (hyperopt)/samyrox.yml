@@ -3,7 +3,7 @@
 name: "SLURM"   # MUST BE "SLURM"
 
 # Required
-account: "project01883"
+account: "project01800"
 partition: "ignored"
 job-name: "stkr"    # this will be the experiment's name in slurm
 
