@@ -168,7 +168,7 @@ name: "GMM20"
 
 experiment_id: "gmm20"
 
-list:
+params:
   num_component_adapter_config:
     del_iters: 25
     add_iters: 25

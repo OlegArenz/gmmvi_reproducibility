@@ -163,12 +163,11 @@ name: "GMM20"
 
 experiment_id: "gmm20"
 
-list:
+params:
   num_component_adapter_config:
     del_iters: 25
     add_iters: 25
 
-grid:
   sample_selector_config:
       desired_samples_per_component: 600
       ratio_reused_samples_to_desired: 0.
