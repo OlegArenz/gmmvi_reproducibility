@@ -185,3 +185,26 @@ grid:
 
 wandb:
     group: "samtrux_gmm20"
+---
+name: "GMM100"
+
+experiment_id: "gmm100"
+
+list:
+  num_component_adapter_config:
+    del_iters: [ 100, 100 ]
+    add_iters: [ 30, 60 ]
+
+grid:
+  sample_selector_config:
+      desired_samples_per_component: [100, 200, 300]
+      ratio_reused_samples_to_desired: [0.]
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: [ 1., 0.8 ]
+
+  model_initialization:
+    num_initial_components: [1, 5]
+
+wandb:
+    group: "samtrux_gmm100"
