@@ -192,5 +192,6 @@ grid:
   model_initialization:
     num_initial_components: [10, 25, 50, 100]
 
+  max_database_size: [2000000]
 wandb:
     group: "sepyrux_gmm100"

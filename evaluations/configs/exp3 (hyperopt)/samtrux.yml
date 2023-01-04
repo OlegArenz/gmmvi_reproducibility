@@ -206,5 +206,6 @@ grid:
   model_initialization:
     num_initial_components: [1, 5]
 
+  max_database_size: [2000000]
 wandb:
     group: "samtrux_gmm100"
