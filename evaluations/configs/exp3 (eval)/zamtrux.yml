@@ -191,7 +191,7 @@ params:
     add_iters: 25
 
   sample_selector_config:
-      desired_samples_per_component: 8000
+      desired_samples_per_component: 6000
       ratio_reused_samples_to_desired: 0.
 
   weight_stepsize_adapter_config:

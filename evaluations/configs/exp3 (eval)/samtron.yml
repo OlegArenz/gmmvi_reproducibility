@@ -189,14 +189,14 @@ params:
     add_iters: 60
 
   sample_selector_config:
-      desired_samples_per_component: 100
+      desired_samples_per_component: 300
       ratio_reused_samples_to_desired: 0.
 
   weight_stepsize_adapter_config:
       initial_stepsize: 1.
 
   model_initialization:
-    num_initial_components: 5
+    num_initial_components: 1
 
   max_database_size: 2000000
 

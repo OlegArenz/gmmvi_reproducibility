@@ -187,7 +187,7 @@ experiment_id: "gmm100"
 params:
   num_component_adapter_config:
     del_iters: 100
-    add_iters: 60
+    add_iters: 30
 
   sample_selector_config:
       desired_samples_per_component: 200

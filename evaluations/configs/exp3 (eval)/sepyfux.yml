@@ -163,7 +163,7 @@ params:
       initial_stepsize: 1.
 
   model_initialization:
-    num_initial_components: 25
+    num_initial_components: 10
 
   max_database_size: 2000000
 wandb:
