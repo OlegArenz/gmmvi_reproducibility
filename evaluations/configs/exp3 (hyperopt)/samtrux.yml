@@ -209,3 +209,32 @@ grid:
   max_database_size: [2000000]
 wandb:
     group: "samtrux_gmm100"
+---
+name: "STM20"
+
+experiment_id: "stm20"
+
+list:
+  num_component_adapter_config:
+    del_iters: [ 100, 100, 100, 100 ]
+    add_iters: [ 30, 60, 30, 60 ]
+
+  component_stepsize_adapter_config:
+    initial_stepsize: [ 0.1, 0.1, 0.01, 0.01 ]
+    min_stepsize: [ 0.001, 0.001, 0.0001, 0.0001 ]
+    max_stepsize: [ 1., 1., 0.1, 0.1 ]
+
+grid:
+  sample_selector_config:
+      desired_samples_per_component: [100, 200, 300]
+      ratio_reused_samples_to_desired: [0.]
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: [ 0.8 ]
+
+  model_initialization:
+    num_initial_components: [1, 5]
+
+  max_database_size: [2000000]
+wandb:
+    group: "samtrux_stm20"
