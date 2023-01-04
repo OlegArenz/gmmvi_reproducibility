@@ -180,3 +180,26 @@ params:
 
 wandb:
     group: "zamtrux_gmm20"
+---
+name: "GMM100"
+
+experiment_id: "gmm100"
+
+params:
+  num_component_adapter_config:
+    del_iters: 25
+    add_iters: 25
+
+  sample_selector_config:
+      desired_samples_per_component: 8000
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 0.8
+
+  model_initialization:
+    num_initial_components: 1
+
+  max_database_size: 2000000
+wandb:
+    group: "zamtrux_gmm100"
