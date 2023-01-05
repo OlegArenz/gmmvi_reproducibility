@@ -214,7 +214,7 @@ grid:
       initial_stepsize: [ 0.8 ]
 
   model_initialization:
-    num_initial_components: [1, 5]
+    num_initial_components: [25, 50]
 
   max_database_size: [2000000]
 wandb:
