@@ -192,17 +192,20 @@ experiment_id: "stm20"
 
 grid:
   component_stepsize_adapter_config:
-      initial_stepsize: [0.0001, 0.0005, 0.001, 0.005]
+      initial_stepsize: [0.0005, 0.005]
 
   sample_selector_config:
       desired_samples_per_component: [100, 200, 300]
       ratio_reused_samples_to_desired: [0.]
 
   weight_stepsize_adapter_config:
-      initial_stepsize: [ 0.8 ]
+      initial_stepsize: [ 0.8, 0. ]
+
+  ng_estimator_config:
+    use_self_normalized_importance_weights: [True, False]
 
   model_initialization:
-    num_initial_components: [25, 50]
+    num_initial_components: [25]
 
   max_database_size: [2000000]
 wandb:
