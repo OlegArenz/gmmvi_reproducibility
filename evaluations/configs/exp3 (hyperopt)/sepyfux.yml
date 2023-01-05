@@ -188,11 +188,11 @@ wandb:
 ---
 name: "STM20"
 
-experiment_id: "stm100"
+experiment_id: "stm20"
 
 grid:
   component_stepsize_adapter_config:
-      initial_stepsize: [0.0001, 0.0005]
+      initial_stepsize: [0.0001, 0.0005, 0.001, 0.005]
 
   sample_selector_config:
       desired_samples_per_component: [100, 200, 300]

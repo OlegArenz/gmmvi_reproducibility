@@ -202,9 +202,9 @@ experiment_id: "stm20"
 
 list:
   component_stepsize_adapter_config:
-      initial_stepsize: [0.0001, 0.0005]
-      min_stepsize: [0.001, 0.005]
-      max_stepsize: [0.1, 0.5]
+      initial_stepsize: [0.0001, 0.0005, 0.001, 0.005]
+      min_stepsize: [0.001, 0.005, 0.01, 0.05]
+      max_stepsize: [0.1, 0.5, 0.5, 0.5]
 grid:
   sample_selector_config:
       desired_samples_per_component: [100, 200, 300]
