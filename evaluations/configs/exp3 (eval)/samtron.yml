@@ -202,3 +202,34 @@ params:
 
 wandb:
     group: "samtron_gmm100"
+---
+name: "STM20"
+
+experiment_id: "stm20"
+
+params:
+  num_component_adapter_config:
+    del_iters: 100
+    add_iters: 60
+
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.1
+    min_stepsize: 0.001
+    max_stepsize: 1.
+
+  sample_selector_config:
+      desired_samples_per_component: 200
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 1.
+
+  model_initialization:
+    num_initial_components: 45
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+      log_metrics_interval: 50
+wandb:
+    group: "samtron_stm20"
