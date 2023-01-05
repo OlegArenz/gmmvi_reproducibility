@@ -202,9 +202,9 @@ experiment_id: "stm20"
 
 list:
   component_stepsize_adapter_config:
-      initial_stepsize: [0.0005, 0.005]
+      initial_stepsize: [0.001, 0.01]
       min_stepsize: [0.005, 0.05]
-      max_stepsize: [0.1, 0.5]
+      max_stepsize: [0.1, 0.1]
 grid:
   sample_selector_config:
       desired_samples_per_component: [100, 200, 300]
@@ -220,5 +220,8 @@ grid:
     num_initial_components: [25]
 
   max_database_size: [2000000]
+
+  gmmvi_runner_config:
+    log_metrics_interval: [ 150 ]
 wandb:
     group: "sepyrux_stm20"

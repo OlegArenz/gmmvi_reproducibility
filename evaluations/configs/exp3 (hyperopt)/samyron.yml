@@ -251,5 +251,7 @@ grid:
 
   max_database_size: [2000000]
 
+  gmmvi_runner_config:
+      log_metrics_interval: [100]
 wandb:
     group: "samyron_stm20"
