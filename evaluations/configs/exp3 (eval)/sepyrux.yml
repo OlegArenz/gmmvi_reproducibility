@@ -52,15 +52,25 @@ name: "BC"
 experiment_id: "breast_cancer"
 
 params:
-    model_initialization:
-        num_initial_components: 150
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.001
+    max_stepsize: 0.05
 
-    sample_selector_config:
-      desired_samples_per_component: 800
+  model_initialization:
+    num_initial_components: 25
 
-    component_stepsize_adapter_config:
-        min_stepsize: 0.00005
+  sample_selector_config:
+    desired_samples_per_component: 300
+    ratio_reused_samples_to_desired: 0.
 
+  weight_stepsize_adapter_config:
+    initial_stepsize: 0.001
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+    log_metrics_interval: 150
 wandb:
     group: "sepyrux_bc"
 ---
@@ -68,15 +78,26 @@ name: "GC"
 
 experiment_id: "german_credit"
 
-grid:
-    model_initialization:
-        num_initial_components: 100
+params:
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.001
+    max_stepsize: 0.05
 
-    sample_selector_config:
-      desired_samples_per_component: 1000
+  model_initialization:
+    num_initial_components: 25
 
-    component_stepsize_adapter_config:
-        min_stepsize: 0.001
+  sample_selector_config:
+    desired_samples_per_component: 200
+    ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+    initial_stepsize: 0.0001
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+    log_metrics_interval: 150
 
 wandb:
     group: "sepyrux_gc"
@@ -86,18 +107,25 @@ name: "BC_mb"
 experiment_id: "breast_cancer_mb"
 
 params:
-    model_initialization:
-        num_initial_components: 20
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.001
+    max_stepsize: 0.05
 
-    sample_selector_config:
-      desired_samples_per_component: 900
-      ratio_reused_samples_to_desired: 1.61803
+  model_initialization:
+    num_initial_components: 50
 
-    weight_stepsize_adapter_config:
-        initial_stepsize: 0.85
+  sample_selector_config:
+    desired_samples_per_component: 1100
+    ratio_reused_samples_to_desired: 0.
 
-    component_stepsize_adapter_config:
-      min_stepsize: 0.00001
+  weight_stepsize_adapter_config:
+    initial_stepsize: 0.0001
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+    log_metrics_interval: 150
 
 wandb:
     group: "sepyrux_bcmb2"
@@ -107,20 +135,25 @@ name: "GC_mb"
 experiment_id: "german_credit_mb"
 
 params:
-    component_stepsize_adapter_config:
-        initial_stepsize: 0.0001
-        min_stepsize: 0.001
-        max_stepsize: 0.1
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.001
+    max_stepsize: 0.05
 
-    model_initialization:
-        num_initial_components: 5
+  model_initialization:
+    num_initial_components: 25
 
-    sample_selector_config:
-      desired_samples_per_component: 700
-      ratio_reused_samples_to_desired: 0.
+  sample_selector_config:
+    desired_samples_per_component: 900
+    ratio_reused_samples_to_desired: 0.
 
-    weight_stepsize_adapter_config:
-        initial_stepsize: 0.005
+  weight_stepsize_adapter_config:
+    initial_stepsize: 0.0001
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+    log_metrics_interval: 150
 
 wandb:
     group: "sepyrux_gcmb"

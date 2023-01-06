@@ -45,19 +45,53 @@ wandb:
     project: gmmvi-exp3-eval
 
 ---
+name: "BC"
+
+experiment_id: "breast_cancer"
+
+params:
+    model_initialization:
+        num_initial_components: 25
+
+    sample_selector_config:
+      desired_samples_per_component: 300
+      ratio_reused_samples_to_desired: 0.
+
+    component_stepsize_adapter_config:
+        initial_stepsize: 0.001
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 0.0001
+
+    max_database_size: 2000000
+
+    gmmvi_runner_config:
+      log_metrics_interval: 150
+wandb:
+    group: "sepyfux_bc"
+---
 name: "GC"
 
 experiment_id: "german_credit"
 
 params:
     model_initialization:
-        num_initial_components: 50
+        num_initial_components: 25
 
     sample_selector_config:
-      desired_samples_per_component: 200
+      desired_samples_per_component: 300
+      ratio_reused_samples_to_desired: 0.
 
     component_stepsize_adapter_config:
-        initial_stepsize: 0.005
+        initial_stepsize: 0.001
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 0.0001
+
+    max_database_size: 2000000
+
+    gmmvi_runner_config:
+      log_metrics_interval: 150
 
 wandb:
     group: "sepyfux_gc"
@@ -67,18 +101,23 @@ name: "BC_mb"
 experiment_id: "breast_cancer_mb"
 
 params:
-    model_initialization:
-        num_initial_components: 5
-
     sample_selector_config:
-      desired_samples_per_component: 900
-      ratio_reused_samples_to_desired: 1.61803
+      desired_samples_per_component: 1100
+      ratio_reused_samples_to_desired: 0.
 
-    weight_stepsize_adapter_config:
-        initial_stepsize: 0.85
+    model_initialization:
+        num_initial_components: 50
 
     component_stepsize_adapter_config:
-      initial_stepsize: 0.001
+        initial_stepsize: 0.001
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 0.001
+
+    max_database_size: 2000000
+
+    gmmvi_runner_config:
+      log_metrics_interval: 150
 
 wandb:
     group: "sepyfux_bcmb2"
@@ -88,18 +127,23 @@ name: "GC_mb"
 experiment_id: "german_credit_mb"
 
 params:
-    model_initialization:
-        num_initial_components: 5
-
     sample_selector_config:
-      desired_samples_per_component: 700
+      desired_samples_per_component: 1100
       ratio_reused_samples_to_desired: 0.
 
-    weight_stepsize_adapter_config:
-        initial_stepsize: 0.005
+    model_initialization:
+        num_initial_components: 50
 
     component_stepsize_adapter_config:
+        initial_stepsize: 0.001
+
+    weight_stepsize_adapter_config:
         initial_stepsize: 0.0001
+
+    max_database_size: 2000000
+
+    gmmvi_runner_config:
+      log_metrics_interval: 150
 
 wandb:
     group: "sepyfux_gcmb"
