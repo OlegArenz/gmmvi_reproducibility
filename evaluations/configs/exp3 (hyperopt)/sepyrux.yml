@@ -51,15 +51,18 @@ name: "BC"
 
 experiment_id: "breast_cancer"
 
+list:
+  component_stepsize_adapter_config:
+    initial_stepsize: [ 0.0005, 0.0005 ]
+    min_stepsize: [ 0.001, 0.0001 ]
+    max_stepsize: [ 0.05, 0.005 ]
+
 grid:
   model_initialization:
     num_initial_components: [ 25, 50 ]
 
   sample_selector_config:
     desired_samples_per_component: [ 100, 200, 300 ]
-
-  component_stepsize_adapter_config:
-    initial_stepsize: [ 0.001, 0.0001 ]
 
   weight_stepsize_adapter_config:
     initial_stepsize: [ 0.001, 0.0001 ]
