@@ -55,6 +55,7 @@ grid:
 
     sample_selector_config:
       desired_samples_per_component: [100, 200, 300]
+      ratio_reused_samples_to_desired: [0.]
 
     component_stepsize_adapter_config:
         initial_stepsize: [0.001, 0.0001]
@@ -79,6 +80,7 @@ grid:
 
     sample_selector_config:
       desired_samples_per_component: [100, 200, 300]
+      ratio_reused_samples_to_desired: [0.]
 
     component_stepsize_adapter_config:
         initial_stepsize: [0.001, 0.0001]
@@ -101,6 +103,7 @@ experiment_id: "breast_cancer_mb"
 grid:
     sample_selector_config:
       desired_samples_per_component: [700, 900, 1100]
+      ratio_reused_samples_to_desired: [0.]
 
     model_initialization:
         num_initial_components: [25, 50]
@@ -126,6 +129,7 @@ experiment_id: "german_credit_mb"
 grid:
     sample_selector_config:
       desired_samples_per_component: [700, 900, 1100]
+      ratio_reused_samples_to_desired: [0.]
 
     model_initialization:
         num_initial_components: [25, 50]
