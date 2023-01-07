@@ -185,7 +185,7 @@ grid:
   gmmvi_runner_config:
     log_metrics_interval: [ 150 ]
 
-    max_database_size: [ 2000000 ]
+  max_database_size: [ 2000000 ]
 wandb:
     group: "sepyrux_planar_4"
 ---
