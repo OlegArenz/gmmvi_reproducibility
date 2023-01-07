@@ -151,14 +151,17 @@ list:
 
 grid:
     sample_selector_config:
-        desired_samples_per_component: [200, 300, 400, 500]
+        desired_samples_per_component: [200, 400, 600]
         ratio_reused_samples_to_desired: [0.]
 
     weight_stepsize_adapter_config:
-        initial_stepsize: [ 0.85 ]
+        initial_stepsize: [ 0.85, 0.5 ]
 
     model_initialization:
-      num_initial_components: [10, 100, 300]
+      num_initial_components: [100, 300]
+
+    gmmvi_runner_config:
+      log_metrics_interval: [ 100 ]
 
     max_database_size: [ 2000000 ]
 wandb:

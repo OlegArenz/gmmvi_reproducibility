@@ -8,13 +8,16 @@ import json
 api = wandb.Api(timeout=40)
 
 
-def get_runs(run_name, group_name, project):
-    return [run for run in api.runs(project) if run_name in run.name and group_name in run.group]
+def get_runs(run_name, group_name, project, exact_name=False):
+    if exact_name:
+        return [run for run in api.runs(project) if run_name in run.name and group_name==run.group]
+    else:
+        return [run for run in api.runs(project) if run_name in run.name and group_name in run.group]
 
 
 def fetch_exp3_hyperopt(project, foldername, group_names, metric="-elbo"):
     def fetch_and_save(group_name, foldername, metric):
-        runs = get_runs("", group_name, project)
+        runs = get_runs("", group_name, project, exact_name=True)
         dataframes = [pd.DataFrame(run.scan_history(["_step", "num_samples", "_runtime", metric, "num_samples"]))
                       for run in runs]
 
@@ -39,6 +42,82 @@ def fetch_exp3_hyperopt(project, foldername, group_names, metric="-elbo"):
         print(f"fetching {group_name}")
         fetch_and_save(group_name, foldername, metric)
 
+def latex_format(metrics, format, larger_is_better=False):
+    all_mean_metrics = np.array([np.mean(metric) for metric in metrics])
+    all_ste_metrics = np.array([np.std(metric) * 3 / np.sqrt(len(metric)) for metric in metrics])
+    if larger_is_better:
+        pessimistic_mean_metric = all_mean_metrics - all_ste_metrics
+        optimistic_mean_metric = all_mean_metrics + all_ste_metrics
+        maybe_best_mean = optimistic_mean_metric >= np.max(pessimistic_mean_metric)
+    else:
+        pessimistic_mean_metric = all_mean_metrics + all_ste_metrics
+        optimistic_mean_metric = all_mean_metrics - all_ste_metrics
+        maybe_best_mean = optimistic_mean_metric < np.min(pessimistic_mean_metric)
+    for mean_metric, ste_metric, maybe_best in zip(all_mean_metrics, all_ste_metrics, maybe_best_mean):
+        if format == "elbo_format":
+            if maybe_best:
+                print(f"& \\thead{{$\\mathbf{{\\num{{{mean_metric:.2f}}}}}$ \\\\ "
+                      f"$\\mathbf{{\\pm \\num{{{ste_metric:.2f}}}}}$}}")
+            else:
+                print(f"& \\thead{{$\\num{{{mean_metric:.2f}}}$ \\\\ "
+                      f"$\\pm \\num{{{ste_metric:.2f}}}$}}")
+        elif format == "mmd_format":
+            if maybe_best:
+                print(f"& \\thead{{$\\mathbf{{\\num{{{mean_metric:.1e}}}}}$ \\\\ "
+                      f"$\\mathbf{{\\pm \\num{{{ste_metric:.0e}}}}}$}}")
+            else:
+                print(f"& \\thead{{$\\num{{{mean_metric:.1e}}}$ \\\\ "
+                      f"$\\pm \\num{{{ste_metric:.0e}}}$}}")
+    print("\\\\")
+
+def fetch_exp3_eval(project, foldername, group_names, metric="-elbo", secondary_metrics=[]):
+    np.set_printoptions(precision=3, linewidth=1000)
+    def fetch_and_save(group_name, foldername, metric):
+        runs = get_runs("", group_name, project, exact_name=True)
+        dataframes = [pd.DataFrame(run.scan_history(["_step", "num_samples", "_runtime", metric, "num_samples"]
+                                                    + secondary_metrics))
+                      for run in runs]
+
+        group_dir = os.path.join("results", foldername, group_name)
+        os.makedirs(group_dir, exist_ok=True)
+        all_elbos = []
+        all_secondaries = []
+        for i in range(len(dataframes)):
+            dataframes[i].to_csv(os.path.join(group_dir, f"run_{i}.csv"))
+            with open(os.path.join(group_dir, f'run_{i}_config.yml'), 'w') as outfile:
+                yaml.dump(json.loads(runs[i].json_config), outfile, default_flow_style=False)
+            this_elbo = dataframes[i][metric].to_numpy()[-1]
+            if metric == "elbo_fb:":
+                this_elbo = -this_elbo
+            all_elbos.append(this_elbo)
+            this_secondaries = [dataframes[i][secondary].to_numpy()[-1] for secondary in secondary_metrics]
+            all_secondaries.append(np.sum(this_secondaries))
+
+        print(f"Elbo: {np.mean(all_elbos):.2f} +/- {3/np.sqrt(len(all_elbos)) * np.std(all_elbos):.2f}  "
+              f"All Elbos: {np.sort(all_elbos)}")
+        print(f"Secondary: {np.mean(all_secondaries):.1e} +/- "
+              f"{3/np.sqrt(len(all_secondaries)) * np.std(all_secondaries):.0e} "
+              f" All Secondaries: {np.sort(all_secondaries)}")
+        return all_elbos, all_secondaries
+        print("----------------------------")
+
+    all_elbos = []
+    all_secondaries = []
+    for group_name in group_names:
+        print(f"fetching {group_name}")
+        this_elbos, this_secondaries = fetch_and_save(group_name, foldername, metric)
+        all_elbos.append(this_elbos)
+        all_secondaries.append(this_secondaries)
+    latex_format(all_elbos, format="elbo_format")
+    larger_is_better = False
+    if secondary_metrics[0] == 'num_detected_modes':
+        secondary_format = "elbo_format"
+        larger_is_better = True
+    elif secondary_metrics[0] == 'MMD:':
+        secondary_format = "mmd_format"
+    latex_format(all_secondaries, format=secondary_format, larger_is_better=larger_is_better)
+
+    print("done")
 
 if __name__ == "__main__":
     #fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "BC",
@@ -67,7 +146,51 @@ if __name__ == "__main__":
     #                     ["samtron_gmm20", "samtrux_gmm20", "samtrox_gmm20",
     #                      "samyron_gmm20", "samyrux_gmm20", "samyrox_gmm20",
     #                      "zamtrux_gmm20", "sepyfux_gmm20", "sepyrux_gmm20"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GMM100",
-                         ["samtron_gmm100", "samtrux_gmm100", "samtrox_gmm100",
-                          "samyron_gmm100", "samyrux_gmm100", "samyrox_gmm100",
-                          "zamtrux_gmm100", "sepyfux_gmm100", "sepyrux_gmm100"])
+    #fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GMM100",
+    #                     ["samtron_gmm100", "samtrux_gmm100", "samtrox_gmm100",
+    #                      "samyron_gmm100", "samyrux_gmm100", "samyrox_gmm100",
+    #                      "zamtrux_gmm100", "sepyfux_gmm100", "sepyrux_gmm100"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM20",
+    #                      ["samtron_stm20", "samtrux_stm20", "samtrox_stm20",
+    #                       "samyron_stm20", "samyrux_stm20", "samyrox_stm20",
+    #                       "zamtrux_stm20", "sepyfux_stm20", "sepyrux_stm20"])
+    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
+                        [ "samtrux_bc", "samtrox_bc", "samtron_bc",
+                          "samyrux_bc", "samyrox_bc", "samyron_bc",
+                          "sepyfux_bc", "sepyrux_bc", "zamtrux_bc"],
+                    secondary_metrics=["MMD:"])
+    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BCMB_EVAL",
+                        [ "samtrux_bcmb2", "samtrox_bcmb2", "samtron_bcmb2",
+                          "samyrux_bcmb2", "samyrox_bcmb2", "samyron_bcmb2",
+                          "sepyfux_bcmb2", "sepyrux_bcmb2", "zamtrux_bcmb2"],
+                    metric="elbo_fb:", secondary_metrics=["MMD:"])
+    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GC_EVAL",
+                        [ "samtrux_gc", "samtrox_gc", "samtron_gc",
+                          "samyrux_gc", "samyrox_gc", "samyron_gc",
+                          "sepyfux_gc", "sepyrux_gc", "zamtrux_gc"],
+                    secondary_metrics=["MMD:"])
+    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GCMB_EVAL",
+                        [ "samtrux_gcmb", "samtrox_gcmb", "samtron_gcmb",
+                          "samyrux_gcmb", "samyrox_gcmb", "samyron_gcmb",
+                          "sepyfux_gcmb", "sepyrux_gcmb", "zamtrux_gcmb"],
+                    metric="elbo_fb:", secondary_metrics=["MMD:"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "Planar4",
+    #                      ["samtrux_planar_4", "samtrox_planar_4", "samtron_planar_4",
+    #                       "samyrux_planar_4", "samyrox_planar_4", "samyron_planar_4",
+    #                       "sepyfux_planar_4", "sepyrux_planar_4", "zamtrux_planar_4"]
+    #                 )
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GMM20",
+    #                      ["samtrux_gmm20", "samtrox_gmm20", "samtron_gmm20",
+    #                       "samyrux_gmm20", "samyrox_gmm20", "samyron_gmm20",
+    #                       "sepyfux_gmm20", "sepyrux_gmm20", "zamtrux_gmm20"],
+    #                 secondary_metrics=["num_detected_modes"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GMM100",
+    #                      ["samtrux_gmm100", "samtrox_gmm100", "samtron_gmm100",
+    #                       "samyrux_gmm100", "samyrox_gmm100", "samyron_gmm100",
+    #                       "sepyfux_gmm100", "sepyrux_gmm100", "zamtrux_gmm100"],
+    #                 secondary_metrics=["num_detected_modes"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "STM20",
+    #                 ["samtrux_stm20", "samtrox_stm20", "samtron_stm20",
+    #                  "samyrux_stm20", "samyrox_stm20", "samyron_stm20",
+    #                  "sepyfux_stm20", "sepyrux_stm20", "zamtrux_stm20"],
+    #                 secondary_metrics=["num_detected_modes"])
