@@ -163,20 +163,25 @@ name: "Planar4"
 experiment_id: "planar_robot_4"
 
 params:
-    component_stepsize_adapter_config:
-        initial_stepsize: 0.0005
-        min_stepsize: 0.005
-        max_stepsize: 0.1
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.001
+    max_stepsize: 0.05
 
-    sample_selector_config:
-        desired_samples_per_component:  150
-        ratio_reused_samples_to_desired: 0.
+  model_initialization:
+    num_initial_components: 300
 
-    weight_stepsize_adapter_config:
-        initial_stepsize: 0.85
+  sample_selector_config:
+    desired_samples_per_component: 200
+    ratio_reused_samples_to_desired: 0.
 
-    model_initialization:
-      num_initial_components: 100
+  weight_stepsize_adapter_config:
+    initial_stepsize: 0.0001
+
+  gmmvi_runner_config:
+    log_metrics_interval: 150
+
+  max_database_size: 2000000
 wandb:
     group: "sepyrux_planar_4"
 ---

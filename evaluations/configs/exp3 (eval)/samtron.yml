@@ -148,12 +148,16 @@ params:
       ratio_reused_samples_to_desired: 0.
 
   weight_stepsize_adapter_config:
-      initial_stepsize: 1.
+      initial_stepsize: 5.
 
   model_initialization:
-    num_initial_components: 10
+    num_initial_components: 100
+
+  gmmvi_runner_config:
+    log_metrics_interval: 125
 
   max_database_size: 2000000
+
 wandb:
     group: "samtron_planar_4"
 ---
