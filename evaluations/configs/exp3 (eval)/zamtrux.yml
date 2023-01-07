@@ -145,20 +145,20 @@ params:
     del_iters: 10
     add_iters: 1
 
-    sample_selector_config:
-        desired_samples_per_component: 200
-        ratio_reused_samples_to_desired: 0.
+  sample_selector_config:
+      desired_samples_per_component: 200
+      ratio_reused_samples_to_desired: 0.
 
-    weight_stepsize_adapter_config:
-        initial_stepsize: 0.5
+  weight_stepsize_adapter_config:
+      initial_stepsize: 0.5
 
-    model_initialization:
-      num_initial_components: 300
+  model_initialization:
+    num_initial_components: 300
 
-    gmmvi_runner_config:
-      log_metrics_interval: 100
+  gmmvi_runner_config:
+    log_metrics_interval: 100
 
-    max_database_size: 2000000
+  max_database_size: 2000000
 wandb:
     group: "zamtrux_planar_4"
 ---
