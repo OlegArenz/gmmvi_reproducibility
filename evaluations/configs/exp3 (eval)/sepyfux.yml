@@ -179,17 +179,17 @@ experiment_id: "gmm20"
 
 params:
   component_stepsize_adapter_config:
-      initial_stepsize: 0.0001
+        initial_stepsize: 0.001
 
   sample_selector_config:
-      desired_samples_per_component: 100
+      desired_samples_per_component: 300
       ratio_reused_samples_to_desired: 0.
 
   weight_stepsize_adapter_config:
-      initial_stepsize: 1.
+      initial_stepsize: 0.0001
 
   model_initialization:
-    num_initial_components: 10
+    num_initial_components: 50
 
 wandb:
     group: "sepyfux_gmm20"
