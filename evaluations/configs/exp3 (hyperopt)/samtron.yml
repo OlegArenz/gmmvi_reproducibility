@@ -273,8 +273,6 @@ grid:
   model_initialization:
     num_initial_components: [1, 20, 30]
 
-  max_database_size: [2000000]
-
   gmmvi_runner_config:
       log_metrics_interval: [500]
 wandb:
