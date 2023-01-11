@@ -271,7 +271,7 @@ grid:
       initial_stepsize: [ 1. ]
 
   model_initialization:
-    num_initial_components: [40]
+    num_initial_components: [ 20, 30, 40 ]
 
   gmmvi_runner_config:
       log_metrics_interval: [500]
