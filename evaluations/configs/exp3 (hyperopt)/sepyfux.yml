@@ -242,3 +242,29 @@ grid:
     log_metrics_interval: [ 150 ]
 wandb:
     group: "sepyfux_stm20"
+---
+name: "STM300"
+
+experiment_id: "stm300"
+
+grid:
+  component_stepsize_adapter_config:
+      initial_stepsize: [0.001]
+
+  sample_selector_config:
+      desired_samples_per_component: [100, 200]
+      ratio_reused_samples_to_desired: [0.]
+
+  ng_estimator_config:
+    use_self_normalized_importance_weights: [True, False]
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: [ 0.8, 0. ]
+
+  model_initialization:
+    num_initial_components: [20, 30, 40]
+
+  gmmvi_runner_config:
+      log_metrics_interval: [1000]
+wandb:
+    group: "sepyfux_stm300"
