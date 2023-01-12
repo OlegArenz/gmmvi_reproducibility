@@ -266,5 +266,7 @@ grid:
 
   gmmvi_runner_config:
       log_metrics_interval: [1000]
+
+  use_sample_database: [False]
 wandb:
     group: "sepyfux_stm300"
