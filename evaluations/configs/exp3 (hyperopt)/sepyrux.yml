@@ -20,7 +20,7 @@ name: "DEFAULT"
 
 # Required: Can also be set in DEFAULT
 path: "/work/scratch/j_arenz/exp3_hyperopt/sepyrux/"   # location to save results in
-iterations: 100000
+iterations: 1000000
 repetitions: 1 # number of times one set of parameters is run
 reps_per_job: 1
 reps_in_parallel: 1 # need to be 1 in order for wandb to work properly
@@ -291,7 +291,7 @@ grid:
     num_initial_components: [20, 30, 40]
 
   gmmvi_runner_config:
-      log_metrics_interval: [1000]
+      log_metrics_interval: [2000]
 
   use_sample_database: [False]
 wandb:
