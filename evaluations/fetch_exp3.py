@@ -154,31 +154,35 @@ if __name__ == "__main__":
     #                      ["samtron_stm20", "samtrux_stm20", "samtrox_stm20",
     #                       "samyron_stm20", "samyrux_stm20", "samyrox_stm20",
     #                       "zamtrux_stm20", "sepyfux_stm20", "sepyrux_stm20"])
-    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
-                        [ "samtrux_bc", "samtrox_bc", "samtron_bc",
-                          "samyrux_bc", "samyrox_bc", "samyron_bc",
-                          "sepyfux_bc", "sepyrux_bc", "zamtrux_bc"],
-                    secondary_metrics=["MMD:"])
-    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BCMB_EVAL",
-                        [ "samtrux_bcmb2", "samtrox_bcmb2", "samtron_bcmb2",
-                          "samyrux_bcmb2", "samyrox_bcmb2", "samyron_bcmb2",
-                          "sepyfux_bcmb2", "sepyrux_bcmb2", "zamtrux_bcmb2"],
-                    metric="elbo_fb:", secondary_metrics=["MMD:"])
-    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GC_EVAL",
-                        [ "samtrux_gc", "samtrox_gc", "samtron_gc",
-                          "samyrux_gc", "samyrox_gc", "samyron_gc",
-                          "sepyfux_gc", "sepyrux_gc", "zamtrux_gc"],
-                    secondary_metrics=["MMD:"])
-    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GCMB_EVAL",
-                        [ "samtrux_gcmb", "samtrox_gcmb", "samtron_gcmb",
-                          "samyrux_gcmb", "samyrox_gcmb", "samyron_gcmb",
-                          "sepyfux_gcmb", "sepyrux_gcmb", "zamtrux_gcmb"],
-                    metric="elbo_fb:", secondary_metrics=["MMD:"])
+    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM300",
+                         ["samtron_stm300", "samtrux_stm300", "samtrox_stm300",
+                          "samyron_stm300", "samyrux_stm300", "samyrox_stm300",
+                          "sepyfux_stm300", "sepyrux_stm300"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
+    #                     [ "samtrux_bc", "samtrox_bc", "samtron_bc",
+    #                       "samyrux_bc", "samyrox_bc", "samyron_bc",
+    #                       "sepyfux_bc", "sepyrux_bc", "zamtrux_bc"],
+    #                 secondary_metrics=["MMD:"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BCMB_EVAL",
+    #                     [ "samtrux_bcmb2", "samtrox_bcmb2", "samtron_bcmb2",
+    #                       "samyrux_bcmb2", "samyrox_bcmb2", "samyron_bcmb2",
+    #                       "sepyfux_bcmb2", "sepyrux_bcmb2", "zamtrux_bcmb2"],
+    #                 metric="elbo_fb:", secondary_metrics=["MMD:"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GC_EVAL",
+    #                     [ "samtrux_gc", "samtrox_gc", "samtron_gc",
+    #                       "samyrux_gc", "samyrox_gc", "samyron_gc",
+    #                       "sepyfux_gc", "sepyrux_gc", "zamtrux_gc"],
+    #                 secondary_metrics=["MMD:"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GCMB_EVAL",
+    #                     [ "samtrux_gcmb", "samtrox_gcmb", "samtron_gcmb",
+    #                       "samyrux_gcmb", "samyrox_gcmb", "samyron_gcmb",
+    #                       "sepyfux_gcmb", "sepyrux_gcmb", "zamtrux_gcmb"],
+    #                 metric="elbo_fb:", secondary_metrics=["MMD:"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "Planar4",
     #                      ["samtrux_planar_4", "samtrox_planar_4", "samtron_planar_4",
     #                       "samyrux_planar_4", "samyrox_planar_4", "samyron_planar_4",
-    #                       "sepyfux_planar_4", "sepyrux_planar_4", "zamtrux_planar_4"]
-    #                 )
+    #                       "sepyfux_planar_4", "sepyrux_planar_4", "zamtrux_planar_4"],
+    #                        secondary_metrics=["MMD:"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GMM20",
     #                      ["samtrux_gmm20", "samtrox_gmm20", "samtron_gmm20",
     #                       "samyrux_gmm20", "samyrox_gmm20", "samyron_gmm20",

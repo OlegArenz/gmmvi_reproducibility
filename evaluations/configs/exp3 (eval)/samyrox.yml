@@ -20,7 +20,7 @@ name: "DEFAULT"
 
 # Required: Can also be set in DEFAULT
 path: "/work/scratch/j_arenz/exp3_eval/samyrox/"   # location to save results in
-iterations: 100000
+iterations: 1000000
 repetitions: 10 # number of times one set of parameters is run
 reps_per_job: 1
 reps_in_parallel: 1 # need to be 1 in order for wandb to work properly
@@ -252,3 +252,34 @@ params:
       log_metrics_interval: 100
 wandb:
     group: "samyrox_stm20"
+---
+name: "STM300"
+
+experiment_id: "stm300"
+
+params:
+  num_component_adapter_config:
+    del_iters: 100
+    add_iters: 200
+    max_components: 150
+    num_prior_samples: 1000
+
+  component_stepsize_adapter_config:
+      initial_stepsize: 0.0005
+      min_stepsize: 0.005
+      max_stepsize: 0.5
+
+  sample_selector_config:
+      desired_samples_per_component: 100
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 0.1
+
+  model_initialization:
+    num_initial_components: 20
+
+  gmmvi_runner_config:
+      log_metrics_interval: 1000
+wandb:
+    group: "samyrox_stm300"
