@@ -280,7 +280,7 @@ wandb:
 ---
 name: "WINE"
 
-experiment_id: "stm300"
+experiment_id: "WINE"
 
 list:
   num_component_adapter_config:
@@ -312,4 +312,4 @@ grid:
   ng_estimator_config:
     only_use_own_samples: [True]
 wandb:
-    group: "samtron_stm300"
+    group: "samtron_WINE"
