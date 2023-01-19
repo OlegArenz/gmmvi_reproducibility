@@ -154,10 +154,10 @@ if __name__ == "__main__":
     #                      ["samtron_stm20", "samtrux_stm20", "samtrox_stm20",
     #                       "samyron_stm20", "samyrux_stm20", "samyrox_stm20",
     #                       "zamtrux_stm20", "sepyfux_stm20", "sepyrux_stm20"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM300",
-                         ["samtron_stm300", "samtrux_stm300", "samtrox_stm300",
-                          "samyron_stm300", "samyrux_stm300", "samyrox_stm300",
-                          "sepyfux_stm300", "sepyrux_stm300"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM300",
+    #                      ["samtron_stm300", "samtrux_stm300", "samtrox_stm300",
+    #                       "samyron_stm300", "samyrux_stm300", "samyrox_stm300",
+    #                       "sepyfux_stm300", "sepyrux_stm300"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
     #                     [ "samtrux_bc", "samtrox_bc", "samtron_bc",
     #                       "samyrux_bc", "samyrox_bc", "samyron_bc",
@@ -198,3 +198,8 @@ if __name__ == "__main__":
     #                  "samyrux_stm20", "samyrox_stm20", "samyron_stm20",
     #                  "sepyfux_stm20", "sepyrux_stm20", "zamtrux_stm20"],
     #                 secondary_metrics=["num_detected_modes"])
+    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "STM300",
+                    ["samtrux_stm300", "samtrox_stm300", "samtron_stm300",
+                     "samyrux_stm300", "samyrox_stm300", "samyron_stm300",
+                     "sepyfux_stm300", "sepyrux_stm300"],
+                    secondary_metrics=["num_detected_modes"])
