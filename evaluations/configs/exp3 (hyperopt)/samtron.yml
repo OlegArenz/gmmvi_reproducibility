@@ -280,7 +280,7 @@ wandb:
 ---
 name: "WINE"
 
-experiment_id: "WINE"
+experiment_id: "wine"
 
 list:
   num_component_adapter_config:
