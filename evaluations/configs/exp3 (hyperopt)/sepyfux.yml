@@ -284,7 +284,7 @@ grid:
       ratio_reused_samples_to_desired: [0.]
 
   weight_stepsize_adapter_config:
-      initial_stepsize: [ 0.8, 0. ]
+      initial_stepsize: [ 0. ]
 
   model_initialization:
     num_initial_components: [ 20 ]
