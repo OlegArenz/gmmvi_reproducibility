@@ -270,3 +270,31 @@ params:
   use_sample_database: False
 wandb:
     group: "sepyfux_stm300"
+---
+name: "WINE"
+
+experiment_id: "wine"
+
+params:
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0001
+
+  sample_selector_config:
+      desired_samples_per_component: 500
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 0.8
+
+  model_initialization:
+    num_initial_components: 20
+
+  gmmvi_runner_config:
+      log_metrics_interval: 200
+
+  use_sample_database: False
+  ng_estimator_config:
+    use_self_normalized_importance_weights: True
+    only_use_own_samples: True
+wandb:
+    group: "sepyfux_WINE"

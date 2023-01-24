@@ -267,3 +267,38 @@ params:
       log_metrics_interval: 500
 wandb:
     group: "samtrox_stm300"
+---
+name: "WINE"
+
+experiment_id: "wine"
+
+params:
+  num_component_adapter_config:
+    del_iters: 100
+    add_iters: 10
+    max_components: 150
+    num_prior_samples: 1000
+
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.1
+    min_stepsize: 0.001
+    max_stepsize: 1.
+
+  sample_selector_config:
+      desired_samples_per_component: 750
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 0.1
+
+  model_initialization:
+    num_initial_components: 5
+
+  gmmvi_runner_config:
+      log_metrics_interval: 100
+
+  use_sample_database: False
+  ng_estimator_config:
+    only_use_own_samples: True
+wandb:
+    group: "samtrox_WINE"
