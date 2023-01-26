@@ -158,10 +158,10 @@ if __name__ == "__main__":
     #                      ["samtron_stm300", "samtrux_stm300", "samtrox_stm300",
     #                       "samyron_stm300", "samyrux_stm300", "samyrox_stm300",
     #                       "sepyfux_stm300", "sepyrux_stm300"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "WINE",
-                         ["samtron_WINE", "samtrux_WINE", "samtrox_WINE",
-                          "samyron_WINE", "samyrux_WINE", "samyrox_WINE",
-                          "zamtrux_WINE", "sepyfux_WINE", "sepyrux_WINE"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "WINE",
+    #                      ["samtron_WINE", "samtrux_WINE", "samtrox_WINE",
+    #                       "samyron_WINE", "samyrux_WINE", "samyrox_WINE",
+    #                       "zamtrux_WINE", "sepyfux_WINE", "sepyrux_WINE"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
     #                     [ "samtrux_bc", "samtrox_bc", "samtron_bc",
     #                       "samyrux_bc", "samyrox_bc", "samyron_bc",
@@ -207,3 +207,8 @@ if __name__ == "__main__":
     #                  "samyrux_stm300", "samyrox_stm300", "samyron_stm300",
     #                  "sepyfux_stm300", "sepyrux_stm300"],
     #                 secondary_metrics=["num_detected_modes"])
+    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "WINE",
+                    ["samtrux_WINE", "samtrox_WINE", "samtron_WINE",
+                     "samyrux_WINE", "samyrox_WINE", "samyron_WINE",
+                     "sepyfux_WINE", "sepyrux_WINE", "zamtrux_WINE"],
+                    secondary_metrics=["bi_test_loss"])
