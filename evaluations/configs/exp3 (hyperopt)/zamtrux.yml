@@ -281,3 +281,30 @@ grid:
     only_use_own_samples: [True]
 wandb:
     group: "zamtrux_WINE"
+---
+name: "TALOS"
+
+experiment_id: "talos"
+
+list:
+  num_component_adapter_config:
+    del_iters: [ 30, 30, 100, 100 ]
+    add_iters: [ 30, 100, 250, 500 ]
+    max_components: [ 250, 250, 250, 250 ]
+    num_prior_samples: [ 1000, 1000, 1000, 1000 ]
+
+grid:
+  sample_selector_config:
+      desired_samples_per_component: [500, 1000]
+      ratio_reused_samples_to_desired: [0.]
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: [ 0.8 ]
+
+  model_initialization:
+    num_initial_components: [ 50, 100, 200 ]
+
+  gmmvi_runner_config:
+      log_metrics_interval: [500]
+wandb:
+    group: "zamtrux_talos"
