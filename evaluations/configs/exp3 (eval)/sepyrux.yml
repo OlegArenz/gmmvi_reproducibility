@@ -340,7 +340,7 @@ params:
       initial_stepsize: 0.8
 
   model_initialization:
-    num_initial_components: 50,
+    num_initial_components: 50
 
   gmmvi_runner_config:
       log_metrics_interval: 1000
