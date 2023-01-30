@@ -318,3 +318,34 @@ params:
     only_use_own_samples: True
 wandb:
     group: "samyron_WINE"
+---
+name: "TALOS"
+
+experiment_id: "talos"
+
+params:
+  num_component_adapter_config:
+    del_iters: 100
+    add_iters: 250
+    max_components: 250
+    num_prior_samples: 1000
+
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.005
+    max_stepsize: 0.5
+
+  sample_selector_config:
+      desired_samples_per_component: 500
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 1.
+
+  model_initialization:
+    num_initial_components: 100
+
+  gmmvi_runner_config:
+      log_metrics_interval: 1000
+wandb:
+    group: "samyron_talos"

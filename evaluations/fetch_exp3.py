@@ -10,9 +10,9 @@ api = wandb.Api(timeout=40)
 
 def get_runs(run_name, group_name, project, exact_name=False):
     if exact_name:
-        return [run for run in api.runs(project) if run_name in run.name and group_name==run.group]
+        return [run for run in api.runs(project, {"group": {"$eq": group_name}}) if run_name in run.name]
     else:
-        return [run for run in api.runs(project) if run_name in run.name and group_name in run.group]
+        return [run for run in api.runs(project, {"group": {"$regex": group_name}}) if run_name in run.name]
 
 
 def fetch_exp3_hyperopt(project, foldername, group_names, metric="-elbo"):
@@ -115,6 +115,9 @@ def fetch_exp3_eval(project, foldername, group_names, metric="-elbo", secondary_
         larger_is_better = True
     elif secondary_metrics[0] == 'MMD:':
         secondary_format = "mmd_format"
+    elif secondary_metrics[0] == "bi_test_loss":
+        secondary_format = "elbo_format"
+        larger_is_better = False
     latex_format(all_secondaries, format=secondary_format, larger_is_better=larger_is_better)
 
     print("done")
@@ -162,6 +165,10 @@ if __name__ == "__main__":
     #                      ["samtron_WINE", "samtrux_WINE", "samtrox_WINE",
     #                       "samyron_WINE", "samyrux_WINE", "samyrox_WINE",
     #                       "zamtrux_WINE", "sepyfux_WINE", "sepyrux_WINE"])
+    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "TALOS",
+                    ["samtrux_talos", "samtrox_talos", "samtron_talos",
+                     "samyrux_talos", "samyrox_talos", "samyron_talos",
+                     "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
     #                     [ "samtrux_bc", "samtrox_bc", "samtron_bc",
     #                       "samyrux_bc", "samyrox_bc", "samyron_bc",
@@ -207,8 +214,13 @@ if __name__ == "__main__":
     #                  "samyrux_stm300", "samyrox_stm300", "samyron_stm300",
     #                  "sepyfux_stm300", "sepyrux_stm300"],
     #                 secondary_metrics=["num_detected_modes"])
-    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "WINE",
-                    ["samtrux_WINE", "samtrox_WINE", "samtron_WINE",
-                     "samyrux_WINE", "samyrox_WINE", "samyron_WINE",
-                     "sepyfux_WINE", "sepyrux_WINE", "zamtrux_WINE"],
-                    secondary_metrics=["bi_test_loss"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "WINE",
+    #                 ["samtrux_WINE", "samtrox_WINE", "samtron_WINE",
+    #                  "samyrux_WINE", "samyrox_WINE", "samyron_WINE",
+    #                  "sepyfux_WINE", "sepyrux_WINE", "zamtrux_WINE"],
+    #                 secondary_metrics=["bi_test_loss"])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "TALOS",
+    #                 ["samtrux_talos", "samtrox_talos", "samtron_talos",
+    #                  "samyrux_talos", "samyrox_talos", "samyron_talos",
+    #                  "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"],
+    #                 secondary_metrics=["entropy"])
