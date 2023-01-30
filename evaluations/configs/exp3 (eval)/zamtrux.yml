@@ -295,6 +295,6 @@ params:
     num_initial_components: 200
 
   gmmvi_runner_config:
-      log_metrics_interval: 500
+      log_metrics_interval: 50
 wandb:
     group: "zamtrux_talos"
