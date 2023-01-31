@@ -165,10 +165,10 @@ if __name__ == "__main__":
     #                      ["samtron_WINE", "samtrux_WINE", "samtrox_WINE",
     #                       "samyron_WINE", "samyrux_WINE", "samyrox_WINE",
     #                       "zamtrux_WINE", "sepyfux_WINE", "sepyrux_WINE"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "TALOS",
-                    ["samtrux_talos", "samtrox_talos", "samtron_talos",
-                     "samyrux_talos", "samyrox_talos", "samyron_talos",
-                     "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "TALOS",
+    #                 ["samtrux_talos", "samtrox_talos", "samtron_talos",
+    #                  "samyrux_talos", "samyrox_talos", "samyron_talos",
+    #                  "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
     #                     [ "samtrux_bc", "samtrox_bc", "samtron_bc",
     #                       "samyrux_bc", "samyrox_bc", "samyron_bc",
@@ -219,8 +219,8 @@ if __name__ == "__main__":
     #                  "samyrux_WINE", "samyrox_WINE", "samyron_WINE",
     #                  "sepyfux_WINE", "sepyrux_WINE", "zamtrux_WINE"],
     #                 secondary_metrics=["bi_test_loss"])
-    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "TALOS",
-    #                 ["samtrux_talos", "samtrox_talos", "samtron_talos",
-    #                  "samyrux_talos", "samyrox_talos", "samyron_talos",
-    #                  "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"],
-    #                 secondary_metrics=["entropy"])
+    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "TALOS",
+                    ["samtrux_talos", "samtrox_talos", "samtron_talos",
+                     "samyrux_talos", "samyrox_talos", "samyron_talos",
+                     "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"],
+                    secondary_metrics=["entropy"])
