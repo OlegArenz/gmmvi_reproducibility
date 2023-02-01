@@ -1,0 +1,17 @@
+---
+name: "GC"
+
+experiment_id: "german_credit"
+
+params:
+    model_initialization:
+        num_initial_components: 50
+
+    sample_selector_config:
+      desired_samples_per_component: 200
+
+    component_stepsize_adapter_config:
+        initial_stepsize: 0.005
+
+wandb:
+    group: "sepyfux_gc"

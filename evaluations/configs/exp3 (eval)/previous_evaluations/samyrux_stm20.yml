@@ -1,0 +1,31 @@
+---
+name: "STM20"
+
+experiment_id: "stm20"
+
+params:
+  num_component_adapter_config:
+    del_iters: 100
+    add_iters: 30
+
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.005
+    max_stepsize: 0.5
+
+  sample_selector_config:
+      desired_samples_per_component: 100
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 9.8 # This was a typo
+
+  model_initialization:
+    num_initial_components: 1
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+      log_metrics_interval: 100
+wandb:
+    group: "samyrux_stm20"

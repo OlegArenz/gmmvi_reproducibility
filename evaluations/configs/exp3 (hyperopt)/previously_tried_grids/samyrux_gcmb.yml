@@ -1,0 +1,23 @@
+---
+name: "GC_mb"
+
+experiment_id: "german_credit_mb"
+
+list:
+    num_component_adapter_config:
+      del_iters: [200]
+      add_iters: [250]
+
+grid:
+    sample_selector_config:
+      desired_samples_per_component: [700, 900, 1200]
+      ratio_reused_samples_to_desired: [0.]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [0.1, 0.05]
+
+    component_stepsize_adapter_config:
+      initial_stepsize: [0.0001, 0.00005, 0.00001, 0.000005]
+
+wandb:
+    group: "samyrux_gcmb"

@@ -1,0 +1,41 @@
+name: "BC"
+
+experiment_id: "breast_cancer"
+
+grid:
+    model_initialization:
+        num_initial_components: [50, 150]
+
+    sample_selector_config:
+      desired_samples_per_component: [400, 600, 800]
+
+    component_stepsize_adapter_config:
+        initial_stepsize: [0.001, 0.0005, 0.0001, 0.00005]
+
+wandb:
+    group: "sepyfux_bc"
+---
+name: "BC"
+
+experiment_id: "breast_cancer"
+
+grid:
+    model_initialization:
+        num_initial_components: [25, 50]
+
+    sample_selector_config:
+      desired_samples_per_component: [100, 200, 300]
+
+    component_stepsize_adapter_config:
+        initial_stepsize: [0.001, 0.0001]
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: [0.001, 0.0001]
+
+    max_database_size: [ 2000000 ]
+
+    gmmvi_runner_config:
+      log_metrics_interval: [ 150 ]
+wandb:
+    group: "sepyfux_bc"
+---

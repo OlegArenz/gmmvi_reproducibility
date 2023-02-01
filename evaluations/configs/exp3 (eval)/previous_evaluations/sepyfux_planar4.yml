@@ -1,0 +1,22 @@
+name: "Planar4"
+
+experiment_id: "planar_robot_4"
+
+params:
+    sample_selector_config:
+        desired_samples_per_component: 150
+        ratio_reused_samples_to_desired: 0.
+
+    component_stepsize_adapter_config:
+        initial_stepsize: 0.0005
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 0.85
+
+    model_initialization:
+      num_initial_components: 10
+
+    max_database_size: 2000000
+wandb:
+    group: "sepyfux_planar_4"
+---

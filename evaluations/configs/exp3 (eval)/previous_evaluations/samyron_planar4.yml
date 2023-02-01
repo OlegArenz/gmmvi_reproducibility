@@ -1,0 +1,29 @@
+---
+name: "Planar4"
+
+experiment_id: "planar_robot_4"
+
+params:
+  num_component_adapter_config:
+    del_iters: 10
+    add_iters: 1
+
+  sample_selector_config:
+      desired_samples_per_component: 200
+      ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: 5.
+
+  component_stepsize_adapter_config:
+      initial_stepsize: 0.0001
+      min_stepsize: 0.001
+      max_stepsize: 0.1
+
+  model_initialization:
+    num_initial_components: 10
+
+  max_database_size: 2000000
+wandb:
+    group: "samyron_planar_4"
+---
