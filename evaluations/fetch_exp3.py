@@ -8,12 +8,20 @@ import json
 api = wandb.Api(timeout=40)
 
 
-def get_runs(run_name, group_name, project, exact_name=False):
+def get_runs(run_name, group_name, project, exact_name=False, bad_run_ids=[]):
+    runs = []
+    bad_indexes = []
     if exact_name:
-        return [run for run in api.runs(project, {"group": {"$eq": group_name}}) if run_name in run.name]
+        all_runs = api.runs(project, {"group": {"$eq": group_name}})
     else:
-        return [run for run in api.runs(project, {"group": {"$regex": group_name}}) if run_name in run.name]
-
+        all_runs = api.runs(project, {"group": {"$regex": group_name}})
+    for i in range(len(all_runs)):
+        if run_name in all_runs[i].name:
+            if all_runs[i].id in bad_run_ids:
+                bad_indexes.append(i)
+                print(f"found bad run {all_runs[i].name} with id {all_runs[i].id}")
+            runs.append(all_runs[i])
+    return runs, bad_indexes
 
 def fetch_exp3_hyperopt(project, foldername, group_names, metric="-elbo"):
     def fetch_and_save(group_name, foldername, metric):
@@ -70,29 +78,33 @@ def latex_format(metrics, format, larger_is_better=False):
                       f"$\\pm \\num{{{ste_metric:.0e}}}$}}")
     print("\\\\")
 
-def fetch_exp3_eval(project, foldername, group_names, metric="-elbo", secondary_metrics=[]):
+def fetch_exp3_eval(project, foldername, group_names, metric="-elbo", secondary_metrics=[], bad_run_ids=[]):
     np.set_printoptions(precision=3, linewidth=1000)
     def fetch_and_save(group_name, foldername, metric):
-        runs = get_runs("", group_name, project, exact_name=True)
-        dataframes = [pd.DataFrame(run.scan_history(["_step", "num_samples", "_runtime", metric, "num_samples"]
-                                                    + secondary_metrics))
-                      for run in runs]
+        runs, bad_indexes = get_runs("", group_name, project, exact_name=True, bad_run_ids=bad_run_ids)
+        histories = [run.scan_history(["_step", "num_samples", "_runtime", metric]
+                                                    + secondary_metrics, page_size=10000) for run in runs]
+        dataframes = [pd.DataFrame(history) for history in histories]
+
 
         group_dir = os.path.join("results", foldername, group_name)
         os.makedirs(group_dir, exist_ok=True)
         all_elbos = []
         all_secondaries = []
         for i in range(len(dataframes)):
-            dataframes[i].to_csv(os.path.join(group_dir, f"run_{i}.csv"))
+            if i in bad_indexes:
+                csv_name = f"run_{i}.csv.bad"
+            else:
+                this_elbo = dataframes[i][metric].to_numpy()[-1]
+                if metric == "elbo_fb:":
+                    this_elbo = -this_elbo
+                all_elbos.append(this_elbo)
+                this_secondaries = [dataframes[i][secondary].to_numpy()[-1] for secondary in secondary_metrics]
+                all_secondaries.append(np.sum(this_secondaries))
+                csv_name = f"run_{i}.csv"
+            dataframes[i].to_csv(os.path.join(group_dir, csv_name))
             with open(os.path.join(group_dir, f'run_{i}_config.yml'), 'w') as outfile:
                 yaml.dump(json.loads(runs[i].json_config), outfile, default_flow_style=False)
-            this_elbo = dataframes[i][metric].to_numpy()[-1]
-            if metric == "elbo_fb:":
-                this_elbo = -this_elbo
-            all_elbos.append(this_elbo)
-            this_secondaries = [dataframes[i][secondary].to_numpy()[-1] for secondary in secondary_metrics]
-            all_secondaries.append(np.sum(this_secondaries))
-
         print(f"Elbo: {np.mean(all_elbos):.2f} +/- {3/np.sqrt(len(all_elbos)) * np.std(all_elbos):.2f}  "
               f"All Elbos: {np.sort(all_elbos)}")
         print(f"Secondary: {np.mean(all_secondaries):.1e} +/- "
@@ -111,6 +123,9 @@ def fetch_exp3_eval(project, foldername, group_names, metric="-elbo", secondary_
     latex_format(all_elbos, format="elbo_format")
     larger_is_better = False
     if secondary_metrics[0] == 'num_detected_modes':
+        secondary_format = "elbo_format"
+        larger_is_better = True
+    elif secondary_metrics[0] == 'entropy':
         secondary_format = "elbo_format"
         larger_is_better = True
     elif secondary_metrics[0] == 'MMD:':
@@ -190,10 +205,14 @@ if __name__ == "__main__":
     #                       "sepyfux_gcmb", "sepyrux_gcmb", "zamtrux_gcmb"],
     #                 metric="elbo_fb:", secondary_metrics=["MMD:"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "Planar4",
-    #                      ["samtrux_planar_4", "samtrox_planar_4", "samtron_planar_4",
-    #                       "samyrux_planar_4", "samyrox_planar_4", "samyron_planar_4",
-    #                       "sepyfux_planar_4", "sepyrux_planar_4", "zamtrux_planar_4"],
-    #                        secondary_metrics=["MMD:"])
+    #                 ["samtrux_planar_4", "samtrox_planar_4", "samtron_planar_4",
+    #                  "samyrux_planar_4", "samyrox_planar_4", "samyron_planar_4",
+    #                  "sepyfux_planar_4", "sepyrux_planar_4", "zamtrux_planar_4"],
+    #                 secondary_metrics=["MMD:"],
+    #                 bad_run_ids=["3hfd8d6r", "3ptff3cu", "19lh811c", "3qhcxgvh", "2b9xffe6", # sepyfux
+    #                              "jibizjlr", "2v0v0r5s", "1jh2pf0h", # sepyrux
+    #                              "3oca1dfq", "2ls1np1b" # zamtrux
+    #                             ])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "GMM20",
     #                      ["samtrux_gmm20", "samtrox_gmm20", "samtron_gmm20",
     #                       "samyrux_gmm20", "samyrox_gmm20", "samyron_gmm20",
@@ -223,4 +242,7 @@ if __name__ == "__main__":
                     ["samtrux_talos", "samtrox_talos", "samtron_talos",
                      "samyrux_talos", "samyrox_talos", "samyron_talos",
                      "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"],
-                    secondary_metrics=["entropy"])
+                    secondary_metrics=["entropy"],
+                    bad_run_ids=["30xiwyyd", "hw5zpafl", "1a1bjuvk", "18gvcw2y", "38a7rluc", #sepyfux
+                                 "3nueuvbg", "33r9flgq", "3rl7tjx8", "38e8uont", "26owio9t", "1u2ddtm0" # sepyrux
+                    ])
