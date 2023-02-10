@@ -303,11 +303,11 @@ params:
     max_stepsize: 0.001
 
   sample_selector_config:
-      desired_samples_per_component: 500
+      desired_samples_per_component: 1500
       ratio_reused_samples_to_desired: 0.
 
   weight_stepsize_adapter_config:
-      initial_stepsize: 0.8
+      initial_stepsize: 0.001
 
   model_initialization:
     num_initial_components: 20
