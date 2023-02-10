@@ -82,3 +82,31 @@ grid:
     only_use_own_samples: [True]
 wandb:
     group: "sepyfux_WINE"
+---
+name: "WINE"
+
+experiment_id: "wine"
+
+grid:
+  component_stepsize_adapter_config:
+    initial_stepsize: [ 0.00005, 0.0001]
+
+  sample_selector_config:
+      desired_samples_per_component: [500, 1000, 1500]
+      ratio_reused_samples_to_desired: [0.]
+
+  weight_stepsize_adapter_config:
+      initial_stepsize: [ 0., 0.8 ]
+
+  model_initialization:
+    num_initial_components: [ 20, 40 ]
+
+  gmmvi_runner_config:
+      log_metrics_interval: [200]
+
+  use_sample_database: [False]
+  ng_estimator_config:
+    use_self_normalized_importance_weights: [ True ]
+    only_use_own_samples: [True]
+wandb:
+    group: "sepyfux_WINE"
