@@ -25,7 +25,7 @@ def get_runs(run_name, group_name, project, exact_name=False, bad_run_ids=[]):
 
 def fetch_exp3_hyperopt(project, foldername, group_names, metric="-elbo"):
     def fetch_and_save(group_name, foldername, metric):
-        runs = get_runs("", group_name, project, exact_name=True)
+        runs, _ = get_runs("", group_name, project, exact_name=True)
         dataframes = [pd.DataFrame(run.scan_history(["_step", "num_samples", "_runtime", metric, "num_samples"]))
                       for run in runs]
 
