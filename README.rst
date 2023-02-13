@@ -166,6 +166,6 @@ the fetch_exp3_eval()-call.  The following experiments were affected:
 
 - SEPYFUX on Planar Robot: 5 bad seeds
 - SEPRUX on Planar Robot: 3 bad seeds
-- SEPYFUX on TALOS: 5 bad seeds
+- SEPYFUX on TALOS: 6 bad seeds
 - SEPYRUX on TALOS: 6 bad seeds
 - We also ignored two seeds for ZAMTRUX on Planar Robot, as the corresponding runs terminated early due to OOM.
