@@ -51,9 +51,9 @@ params:
   model_initialization:
     num_initial_components: 25
 
-  max_database_size: 2000000
+  max_database_size: 500
 
   gmmvi_runner_config:
-    log_metrics_interval: 150
+    log_metrics_interval: 500
 wandb:
     group: "sepyfux_stm20_matparams"
