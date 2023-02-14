@@ -238,11 +238,11 @@ if __name__ == "__main__":
     #                  "samyrux_WINE", "samyrox_WINE", "samyron_WINE",
     #                  "sepyfux_WINE", "sepyrux_WINE", "zamtrux_WINE"],
     #                 secondary_metrics=["bi_test_loss"])
-    fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "TALOS_EVAL",
-                    ["samtrux_talos", "samtrox_talos", "samtron_talos",
-                     "samyrux_talos", "samyrox_talos", "samyron_talos",
-                     "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"],
-                    secondary_metrics=["entropy"],
-                    bad_run_ids=["30xiwyyd", "hw5zpafl", "1a1bjuvk", "18gvcw2y", "38a7rluc", "1xwafa5", #sepyfux
-                                 "3nueuvbg", "33r9flgq", "3rl7tjx8", "38e8uont", "26owio9t", "1u2ddtm0" # sepyrux
-                    ])
+    # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "TALOS_EVAL",
+    #                 ["samtrux_talos", "samtrox_talos", "samtron_talos",
+    #                  "samyrux_talos", "samyrox_talos", "samyron_talos",
+    #                  "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"],
+    #                 secondary_metrics=["entropy"],
+    #                 bad_run_ids=["30xiwyyd", "hw5zpafl", "1a1bjuvk", "18gvcw2y", "38a7rluc", "1xwafa5i", #sepyfux
+    #                              "3nueuvbg", "33r9flgq", "3rl7tjx8", "38e8uont", "26owio9t", "1u2ddtm0" # sepyrux
+    #                 ])
