@@ -1,0 +1,28 @@
+component_stepsize_adapter_config:
+  desc: null
+  value:
+    initial_stepsize: 0.01
+gmmvi_runner_config:
+  desc: null
+  value:
+    log_metrics_interval: 150
+max_database_size:
+  desc: null
+  value: 2000000
+model_initialization:
+  desc: null
+  value:
+    num_initial_components: 25
+ng_estimator_config:
+  desc: null
+  value:
+    use_self_normalized_importance_weights: false
+sample_selector_config:
+  desc: null
+  value:
+    desired_samples_per_component: 200
+    ratio_reused_samples_to_desired: 0
+weight_stepsize_adapter_config:
+  desc: null
+  value:
+    initial_stepsize: 0
