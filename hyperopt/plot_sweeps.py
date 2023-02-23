@@ -3,6 +3,18 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
+from tueplots import figsizes, fonts, fontsizes
+from matplotlib.ticker import FormatStrFormatter
+
+plt.rcParams.update({"figure.dpi": 150})
+plt.rcParams.update(figsizes.jmlr2001(nrows=4, ncols=3))
+plt.rcParams.update(fontsizes.jmlr2001())
+#plt.rcParams['xtick.labelsize'] = 12
+#plt.rcParams['ytick.labelsize'] = 12
+plt.rcParams['figure.figsize'] = (2.0804064, 1.8)
+# plt.rcParams['savefig.pad_inches'] = 0.
+#plt.rcParams[ 'savefig.bbox'] = None
+#6.50127
 
 import matplotlib
 plt.ion()
@@ -87,21 +99,32 @@ def plot_shaded(xs, curves, color):
 def plot_means(xs, curves, color, linestyle):
     return plt.plot(xs, np.mean(curves, axis=0), color=color, linestyle=linestyle)[0]
 
-def make_plots(root_dir, x_axis, y_axis, x_limits=None, y_limits=None, negate_y=False):
+def make_plots(root_dir, x_axis, y_axis, colors, linestyles, x_limits=None, y_limits=None, negate_y=False,
+               offset=None, y_ticks=None):
     plots = []
     legends = []
+  #  offset = int(1e6)
     for algorithm_dir in os.listdir(root_dir):
         codename = algorithm_dir[:7]
-        color = colormap(colors[codename]/len(colors))
 
         xs, curves = interpolate_curves(os.path.join(root_dir, algorithm_dir), x_axis, y_axis)
         if negate_y:
             curves = -curves
+  #      offset = np.minimum(offset, np.min(curves))
+        color = colormap(colors[codename] / len(colors))
         plot_shaded(xs, curves, color)
         plots.append(plot_means(xs, curves, color, linestyles[codename]))
         legends.append(codename)
     plt.xlim(x_limits)
     plt.ylim(y_limits)
+    figure_path = os.path.join(my_path, os.pardir, "figures")
+    os.makedirs(figure_path, exist_ok=True)
+    ax = plt.gca()
+   # ax.yaxis.set_major_formatter(FormatStrFormatter('%.1E'))
+    ax.ticklabel_format(axis='y', useOffset=offset, style="plain")
+    if y_ticks is not None:
+        ax.set_yticks(offset + y_ticks)
+    plt.savefig(os.path.join(figure_path, os.path.basename(os.path.normpath(root_dir)) + ".pdf"))
     plt.legend(plots, legends)
 
 if __name__ == "__main__":
@@ -109,81 +132,113 @@ if __name__ == "__main__":
     make_plots(root_dir=os.path.join(my_path, "../evaluations/results/BC_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(300, 3600),
-               y_limits=(85, 78.))
+               y_limits=(78., 85),
+               offset=78.,
+               y_ticks=np.linspace(0,7,5))
 
     plt.figure(2)
     make_plots(root_dir=os.path.join(my_path, "../evaluations/results/BCMB_EVAL"),
                x_axis="_runtime",
                y_axis="elbo_fb:",
+               colors=colors, linestyles=linestyles,
                x_limits=(300, 3600),
-               y_limits=(100, 78),
-               negate_y=True)
+               y_limits=(78, 100),
+               negate_y=True,
+               offset=78.,
+               y_ticks=np.linspace(0,21,7))
 
     plt.figure(3)
     make_plots(root_dir=os.path.join(my_path, "../evaluations/results/GC_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(250, 6900),
-               y_limits=(585.09, 585.2))
+               y_limits=(585.09, 585.1954),
+               offset=585.09,
+               y_ticks=np.linspace(0,0.1,6))
 
     plt.figure(4)
     make_plots(root_dir=os.path.join(my_path, "../evaluations/results/GCMB_EVAL"),
                x_axis="_runtime",
                y_axis="elbo_fb:",
+               colors=colors, linestyles=linestyles,
                x_limits=(300, 6900),
                y_limits=(585.09, 586.4),
-               negate_y=True)
+               negate_y=True,
+               offset=585.09,
+               y_ticks=np.linspace(0,1.2,6))
 
     plt.figure(5)
-    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/GMM20"),
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/GMM20_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(0, 1600),
-               y_limits=(0., 1.))
+               y_limits=(0., 1.),
+               offset=0.,
+               y_ticks=np.linspace(0,1.,5))
 
     plt.figure(6)
-    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/GMM100"),
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/GMM100_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(0, 1600),
-               y_limits=(0., 1.))
+               y_limits=(0., 1.),
+               offset=0.,
+               y_ticks=np.linspace(0,1.,5))
 
     plt.figure(7)
-    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/STM20"),
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/STM20_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(0, 7100),
-               y_limits=(0., 1.))
+               y_limits=(0., 1.),
+               offset=0.,
+               y_ticks=np.linspace(0,1,5))
 
     plt.figure(8)
-    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/STM300"),
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/STM300_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(0, 70000),
-               y_limits=(14, 28))
+               y_limits=(14, 28),
+               offset=14.,
+               y_ticks=np.linspace(0,15,7))
 
     plt.figure(9)
-    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/Planar4"),
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/Planar4_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(0, 24000),
-               y_limits=(11, 25))
+               y_limits=(11, 25),
+               offset=11,
+               y_ticks=np.linspace(0,15,7))
 
     plt.figure(10)
-    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/WINE"),
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/WINE_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(0, 70000),
-               y_limits=(1350, 1560))
+               y_limits=(1350, 1560),
+               offset=1350,
+               y_ticks=np.linspace(0,200,5))
 
     plt.figure(11)
-    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/TALOS"),
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/results/TALOS_EVAL"),
                x_axis="_runtime",
                y_axis="-elbo",
+               colors=colors, linestyles=linestyles,
                x_limits=(0, 82000),
-               y_limits=(-25, -23))
+               y_limits=(-25, -23),
+               offset=-25.,
+               y_ticks=np.linspace(0,1.8,5))
 
 
-    plot_list(["exp1_wine/septrux", "exp1_wine/sepyrux", "exp1_wine/sepirux"])
     print("done")
