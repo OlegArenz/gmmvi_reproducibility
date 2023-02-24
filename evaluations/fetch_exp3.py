@@ -246,3 +246,6 @@ if __name__ == "__main__":
     #                 bad_run_ids=["30xiwyyd", "hw5zpafl", "1a1bjuvk", "18gvcw2y", "38a7rluc", "1xwafa5i", #sepyfux
     #                              "3nueuvbg", "33r9flgq", "3rl7tjx8", "38e8uont", "26owio9t", "1u2ddtm0" # sepyrux
     #                 ])
+    # fetch_exp3_eval("amortizedvips/gmmvi-matcom", "Sepyfux_STM300",
+    #                 ["sepyfux_stm300"],
+    #                 secondary_metrics=["num_detected_modes"])

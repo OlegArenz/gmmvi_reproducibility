@@ -135,8 +135,8 @@ experience from the previous experiments to select promising hyperparameters. Or
 4. We also had to restart several hyperparameter searches due to typos.
 
 The previously tried configs can be found under
-`evaluations/configs/exp3 (hyperopt)/previously_tried_grids <evaluations/configs/exp3 (hyperopt)/previously_tried_grids>`_
-The 24 parameter-settings that were eventually used the select the best settings for the 10-seed evaluations can be
+`evaluations/configs/exp3 (hyperopt)/previously_tried_grids <evaluations/configs/exp3 (hyperopt)/previously_tried_grids>`_.
+The 24 parameter-settings that were eventually used for selecting the best settings for the 10-seed evaluations can be
 found in `evaluations/configs/exp3 (hyperopt) <evaluations/configs/exp3 (hyperopt)>`_. We stress that the additional
 evaluations mainly benefited SEPYFUX and SEPYRUX (which still perform worst among the tested candidates overall).
 The experiments were started using the run_exp3_<environment>.sh scripts that can be found in
@@ -159,7 +159,7 @@ more memory), using the scripts `evaluations/run_exp3_p4_eval_zamtrux.sh <evalua
 
 The results were fetched from WandB using the script `evaluations/fetch_exp3.py <evaluations/fetch_exp3.py>`_.
 This script also creates the Latex-code for the table for experiment 3. Despite the additional hyperparameter search,
-the optimization for SEPYFUX and SEPYRUX was sometimes unstable leading to outliers with very high ELBOs. We decided
+the optimization for SEPYFUX and SEPYRUX were sometimes unstable leading to outliers with very high ELBOs. We decided
 to exclude the corresponding seeds for computing the values / latex-code for the table. The affected seeds
 can be found in `evaluations/fetch_exp3.py <evaluations/fetch_exp3.py>`_,  where they are passed as "bad_run_ids" to
 the fetch_exp3_eval()-call.  The following experiments were affected:

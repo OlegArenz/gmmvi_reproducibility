@@ -11,7 +11,6 @@ plt.rcParams.update(figsizes.jmlr2001(nrows=4, ncols=3))
 plt.rcParams.update(fontsizes.jmlr2001())
 #plt.rcParams['xtick.labelsize'] = 12
 #plt.rcParams['ytick.labelsize'] = 12
-plt.rcParams['figure.figsize'] = (2.0804064, 1.8)
 # plt.rcParams['savefig.pad_inches'] = 0.
 #plt.rcParams[ 'savefig.bbox'] = None
 #6.50127
@@ -100,7 +99,7 @@ def plot_means(xs, curves, color, linestyle):
     return plt.plot(xs, np.mean(curves, axis=0), color=color, linestyle=linestyle)[0]
 
 def make_plots(root_dir, x_axis, y_axis, colors, linestyles, x_limits=None, y_limits=None, negate_y=False,
-               offset=None, y_ticks=None):
+               offset=None, y_ticks=None, legend_names=None, plot_legend=False, semilogy=False):
     plots = []
     legends = []
   #  offset = int(1e6)
@@ -114,20 +113,58 @@ def make_plots(root_dir, x_axis, y_axis, colors, linestyles, x_limits=None, y_li
         color = colormap(colors[codename] / len(colors))
         plot_shaded(xs, curves, color)
         plots.append(plot_means(xs, curves, color, linestyles[codename]))
-        legends.append(codename)
+        if legend_names is None:
+            legends.append(codename)
+        else:
+            legends.append(legend_names[codename])
+    if semilogy:
+        plt.semilogy()
     plt.xlim(x_limits)
     plt.ylim(y_limits)
     figure_path = os.path.join(my_path, os.pardir, "figures")
     os.makedirs(figure_path, exist_ok=True)
     ax = plt.gca()
    # ax.yaxis.set_major_formatter(FormatStrFormatter('%.1E'))
-    ax.ticklabel_format(axis='y', useOffset=offset, style="plain")
+    if not semilogy:
+        ax.ticklabel_format(axis='y', useOffset=offset, style="plain")
     if y_ticks is not None:
         ax.set_yticks(offset + y_ticks)
+    if plot_legend:
+        plt.legend(plots, legends)
     plt.savefig(os.path.join(figure_path, os.path.basename(os.path.normpath(root_dir)) + ".pdf"))
-    plt.legend(plots, legends)
 
-if __name__ == "__main__":
+def plot_matlab_comparisons():
+    plt.rcParams['figure.figsize'] = (3.1856223, 2.75)
+    plt.figure(1)
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/iBayesLR_results/stm20"),
+               x_axis="num_samples",
+               y_axis="-elbo",
+               colors={"mat_our": 0, "tf_ours": 1, "mat_the": 2},
+               linestyles={"mat_our": "-", "tf_ours": "-.", "mat_the": "--",},
+               legend_names={"mat_our": "reference (our params)",
+                             "tf_ours": "ours (our params)",
+                             "mat_the": "reference (ref. params)"
+                             },
+               y_limits=(0, 10.),
+               plot_legend=True,
+               semilogy=True)
+    plt.semilogy()
+
+    plt.figure(2)
+    make_plots(root_dir=os.path.join(my_path, "../evaluations/iBayesLR_results/stm300"),
+               x_axis="num_samples",
+               y_axis="-elbo",
+               colors={"mat_our": 0, "tf_ours": 1, "dummy": 2},
+               linestyles={"mat_our": "-", "tf_ours": "-."},
+               legend_names={"mat_our": "reference",
+                             "tf_ours": "ours"},
+               y_limits=(0, 700.),
+               plot_legend=True,
+               semilogy=True)
+    plt.semilogy()
+
+def plot_learning_curves():
+    plt.rcParams['figure.figsize'] = (2.0804064, 1.8)
     plt.figure(1)
     make_plots(root_dir=os.path.join(my_path, "../evaluations/results/BC_EVAL"),
                x_axis="_runtime",
@@ -239,6 +276,10 @@ if __name__ == "__main__":
                y_limits=(-25, -23),
                offset=-25.,
                y_ticks=np.linspace(0,1.8,5))
+
+if __name__ == "__main__":
+    plot_matlab_comparisons()
+    plot_learning_curves()
 
 
     print("done")
