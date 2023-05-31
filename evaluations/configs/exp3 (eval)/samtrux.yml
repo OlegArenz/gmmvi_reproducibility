@@ -111,7 +111,7 @@ params:
 wandb:
     group: "samtrux_gc"
 ---
-name: "GC_TESTPLIST"
+name: "GC_TESTSPLIT"
 
 experiment_id: "german_credit"
 

@@ -111,7 +111,7 @@ params:
 wandb:
     group: "samtrox_gc"
 ---
-name: "GC_TESTPLIT"
+name: "GC_TESTSPLIT"
 
 experiment_id: "german_credit"
 
