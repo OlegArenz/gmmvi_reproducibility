@@ -74,6 +74,27 @@ params:
 wandb:
     group: "samyron_bc"
 ---
+name: "BC_TESTSPLIT"
+
+experiment_id: "breast_cancer"
+
+params:
+    num_component_adapter_config:
+      del_iters: 100
+      add_iters: 50
+
+    sample_selector_config:
+      desired_samples_per_component: 700
+      ratio_reused_samples_to_desired: 2.5
+
+    component_stepsize_adapter_config:
+        min_stepsize: 0.0005
+
+    environment_config:
+      size_test_set: 227
+wandb:
+    group: "samyron_bcts"
+---
 name: "GC"
 
 experiment_id: "german_credit"
@@ -92,6 +113,27 @@ params:
 
 wandb:
     group: "samyron_gc"
+---
+name: "GC_TESTSPLIT"
+
+experiment_id: "german_credit"
+
+params:
+    num_component_adapter_config:
+      del_iters: 100
+      add_iters: 50
+
+    sample_selector_config:
+      desired_samples_per_component: 900
+      ratio_reused_samples_to_desired: 1.61803
+
+    component_stepsize_adapter_config:
+        min_stepsize: 0.0001
+
+    environment_config:
+      size_test_set: 600
+wandb:
+    group: "samyron_gcts"
 ---
 name: "BC_mb"
 

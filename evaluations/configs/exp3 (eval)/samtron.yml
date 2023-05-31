@@ -73,6 +73,28 @@ params:
 wandb:
     group: "samtron_bc"
 ---
+name: "BC_TESTSPLIT"
+
+experiment_id: "breast_cancer"
+
+params:
+    num_component_adapter_config:
+      del_iters: 100
+      add_iters: 25
+
+    sample_selector_config:
+      desired_samples_per_component: 250
+      ratio_reused_samples_to_desired: 0.
+
+    component_stepsize_adapter_config:
+      initial_stepsize: 0.01
+
+    environment_config:
+      size_test_set: 227
+
+wandb:
+    group: "samtron_bcts"
+---
 name: "GC"
 
 experiment_id: "german_credit"
@@ -91,6 +113,27 @@ params:
 
 wandb:
     group: "samtron_gc"
+---
+name: "GC_TESTSPLIT"
+
+experiment_id: "german_credit"
+
+params:
+    num_component_adapter_config:
+      del_iters: 100
+      add_iters: 25
+
+    sample_selector_config:
+      desired_samples_per_component: 400
+      ratio_reused_samples_to_desired: 1.61803
+
+    component_stepsize_adapter_config:
+      initial_stepsize: 0.2
+
+    environment_config:
+      size_test_set: 600
+wandb:
+    group: "samtron_gcts"
 ---
 name: "BC_mb"
 

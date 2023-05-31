@@ -133,57 +133,61 @@ def fetch_exp3_eval(project, foldername, group_names, metric="-elbo", secondary_
     elif secondary_metrics[0] == "bi_test_loss":
         secondary_format = "elbo_format"
         larger_is_better = False
+    elif secondary_metrics[0] == "bi_accuracy:":
+        secondary_format = "elbo_format"
+        larger_is_better = True
+        all_secondaries = np.array(all_secondaries) * 100
     latex_format(all_secondaries, format=secondary_format, larger_is_better=larger_is_better)
 
     print("done")
 
 if __name__ == "__main__":
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "BC",
-                       ["samtron_bc", "samtrux_bc", "samtrox_bc",
-                        "samyron_bc", "samyrux_bc", "samyrox_bc",
-                        "zamtrux_bc", "sepyfux_bc", "sepyrux_bc"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GC",
-                        ["samtron_gc", "samtrux_gc", "samtrox_gc",
-                         "samyron_gc", "samyrux_gc", "samyrox_gc",
-                         "zamtrux_gc", "sepyfux_gc", "sepyrux_gc"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "BC_MB",
-                        ["samtron_bcmb", "samtrux_bcmb", "samtrox_bcmb",
-                         "samyron_bcmb", "samyrux_bcmb", "samyrox_bcmb",
-                         "zamtrux_bcmb", "sepyfux_bcmb", "sepyrux_bcmb"],
-                        metric="elbo_fb:")
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GC_MB",
-                        ["samtron_gcmb", "samtrux_gcmb", "samtrox_gcmb",
-                         "samyron_gcmb", "samyrux_gcmb", "samyrox_gcmb",
-                         "zamtrux_gcmb", "sepyfux_gcmb", "sepyrux_gcmb"],
-                        metric="elbo_fb:")
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "Planar4",
-                         ["samtron_planar_4", "samtrux_planar_4", "samtrox_planar_4",
-                          "samyron_planar_4", "samyrux_planar_4", "samyrox_planar_4",
-                          "zamtrux_planar_4", "sepyfux_planar_4", "sepyrux_planar_4"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GMM20",
-                        ["samtron_gmm20", "samtrux_gmm20", "samtrox_gmm20",
-                         "samyron_gmm20", "samyrux_gmm20", "samyrox_gmm20",
-                         "zamtrux_gmm20", "sepyfux_gmm20", "sepyrux_gmm20"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GMM100",
-                        ["samtron_gmm100", "samtrux_gmm100", "samtrox_gmm100",
-                         "samyron_gmm100", "samyrux_gmm100", "samyrox_gmm100",
-                         "zamtrux_gmm100", "sepyfux_gmm100", "sepyrux_gmm100"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM20",
-                         ["samtron_stm20", "samtrux_stm20", "samtrox_stm20",
-                          "samyron_stm20", "samyrux_stm20", "samyrox_stm20",
-                          "zamtrux_stm20", "sepyfux_stm20", "sepyrux_stm20"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM300",
-                         ["samtron_stm300", "samtrux_stm300", "samtrox_stm300",
-                          "samyron_stm300", "samyrux_stm300", "samyrox_stm300",
-                          "sepyfux_stm300", "sepyrux_stm300"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "WINE",
-                         ["samtron_WINE", "samtrux_WINE", "samtrox_WINE",
-                          "samyron_WINE", "samyrux_WINE", "samyrox_WINE",
-                          "zamtrux_WINE", "sepyfux_WINE", "sepyrux_WINE"])
-    fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "TALOS",
-                    ["samtrux_talos", "samtrox_talos", "samtron_talos",
-                     "samyrux_talos", "samyrox_talos", "samyron_talos",
-                     "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "BC",
+    #                    ["samtron_bc", "samtrux_bc", "samtrox_bc",
+    #                     "samyron_bc", "samyrux_bc", "samyrox_bc",
+    #                     "zamtrux_bc", "sepyfux_bc", "sepyrux_bc"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GC",
+    #                     ["samtron_gc", "samtrux_gc", "samtrox_gc",
+    #                      "samyron_gc", "samyrux_gc", "samyrox_gc",
+    #                      "zamtrux_gc", "sepyfux_gc", "sepyrux_gc"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "BC_MB",
+    #                     ["samtron_bcmb", "samtrux_bcmb", "samtrox_bcmb",
+    #                      "samyron_bcmb", "samyrux_bcmb", "samyrox_bcmb",
+    #                      "zamtrux_bcmb", "sepyfux_bcmb", "sepyrux_bcmb"],
+    #                     metric="elbo_fb:")
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GC_MB",
+    #                     ["samtron_gcmb", "samtrux_gcmb", "samtrox_gcmb",
+    #                      "samyron_gcmb", "samyrux_gcmb", "samyrox_gcmb",
+    #                      "zamtrux_gcmb", "sepyfux_gcmb", "sepyrux_gcmb"],
+    #                     metric="elbo_fb:")
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "Planar4",
+    #                      ["samtron_planar_4", "samtrux_planar_4", "samtrox_planar_4",
+    #                       "samyron_planar_4", "samyrux_planar_4", "samyrox_planar_4",
+    #                       "zamtrux_planar_4", "sepyfux_planar_4", "sepyrux_planar_4"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GMM20",
+    #                     ["samtron_gmm20", "samtrux_gmm20", "samtrox_gmm20",
+    #                      "samyron_gmm20", "samyrux_gmm20", "samyrox_gmm20",
+    #                      "zamtrux_gmm20", "sepyfux_gmm20", "sepyrux_gmm20"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "GMM100",
+    #                     ["samtron_gmm100", "samtrux_gmm100", "samtrox_gmm100",
+    #                      "samyron_gmm100", "samyrux_gmm100", "samyrox_gmm100",
+    #                      "zamtrux_gmm100", "sepyfux_gmm100", "sepyrux_gmm100"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM20",
+    #                      ["samtron_stm20", "samtrux_stm20", "samtrox_stm20",
+    #                       "samyron_stm20", "samyrux_stm20", "samyrox_stm20",
+    #                       "zamtrux_stm20", "sepyfux_stm20", "sepyrux_stm20"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "STM300",
+    #                      ["samtron_stm300", "samtrux_stm300", "samtrox_stm300",
+    #                       "samyron_stm300", "samyrux_stm300", "samyrox_stm300",
+    #                       "sepyfux_stm300", "sepyrux_stm300"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "WINE",
+    #                      ["samtron_WINE", "samtrux_WINE", "samtrox_WINE",
+    #                       "samyron_WINE", "samyrux_WINE", "samyrox_WINE",
+    #                       "zamtrux_WINE", "sepyfux_WINE", "sepyrux_WINE"])
+    # fetch_exp3_hyperopt("amortizedvips/gmmvi-exp3", "TALOS",
+    #                 ["samtrux_talos", "samtrox_talos", "samtron_talos",
+    #                  "samyrux_talos", "samyrox_talos", "samyron_talos",
+    #                  "sepyfux_talos", "sepyrux_talos", "zamtrux_talos"])
     # fetch_exp3_eval("amortizedvips/gmmvi-exp3-eval", "BC_EVAL",
     #                     [ "samtrux_bc", "samtrox_bc", "samtron_bc",
     #                       "samyrux_bc", "samyrox_bc", "samyron_bc",
@@ -249,3 +253,18 @@ if __name__ == "__main__":
     # fetch_exp3_eval("amortizedvips/gmmvi-matcom", "Sepyfux_STM300",
     #                 ["sepyfux_stm300"],
     #                 secondary_metrics=["num_detected_modes"])
+    # fetch_exp3_eval("amortizedvips/logregacc", "BC_EVAL",
+    #                     [ "samtrux_bc", "samtrox_bc", "samtron_bc",
+    #                       "samyrux_bc", "samyrox_bc", "samyron_bc",
+    #                       "sepyfux_bc", "sepyrux_bc", "zamtrux_bc"],
+    #                 secondary_metrics=["bi_accuracy:"])
+    # fetch_exp3_eval("amortizedvips/logregacc", "GC_EVAL",
+    #                     [ "samtrux_gc", "samtrox_gc", "samtron_gc",
+    #                       "samyrux_gc", "samyrox_gc", "samyron_gc",
+    #                       "sepyfux_gc", "sepyrux_gc", "zamtrux_gc"],
+    #                 secondary_metrics=["bi_accuracy:"])
+    fetch_exp3_eval("amortizedvips/logregacc", "GCMB_EVAL",
+                        [ "samtrux_gcmb", "samtrox_gcmb", "samtron_gcmb",
+                          "samyrux_gcmb", "samyrox_gcmb", "samyron_gcmb",
+                          "sepyfux_gcmb", "sepyrux_gcmb", "zamtrux_gcmb"],
+                    metric="elbo_fb:", secondary_metrics=["bi_accuracy:"])

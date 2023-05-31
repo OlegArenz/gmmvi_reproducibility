@@ -74,6 +74,36 @@ params:
 wandb:
     group: "sepyrux_bc"
 ---
+name: "BC_TESTSPLIT"
+
+experiment_id: "breast_cancer"
+
+params:
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.001
+    max_stepsize: 0.05
+
+  model_initialization:
+    num_initial_components: 25
+
+  sample_selector_config:
+    desired_samples_per_component: 300
+    ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+    initial_stepsize: 0.001
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+    log_metrics_interval: 150
+
+  environment_config:
+    size_test_set: 227
+wandb:
+    group: "sepyrux_bcts"
+---
 name: "GC"
 
 experiment_id: "german_credit"
@@ -101,6 +131,36 @@ params:
 
 wandb:
     group: "sepyrux_gc"
+---
+name: "GC_TESTSPLIT"
+
+experiment_id: "german_credit"
+
+params:
+  component_stepsize_adapter_config:
+    initial_stepsize: 0.0005
+    min_stepsize: 0.001
+    max_stepsize: 0.05
+
+  model_initialization:
+    num_initial_components: 25
+
+  sample_selector_config:
+    desired_samples_per_component: 200
+    ratio_reused_samples_to_desired: 0.
+
+  weight_stepsize_adapter_config:
+    initial_stepsize: 0.0001
+
+  max_database_size: 2000000
+
+  gmmvi_runner_config:
+    log_metrics_interval: 150
+
+  environment_config:
+    size_test_set: 600
+wandb:
+    group: "sepyrux_gcts"
 ---
 name: "BC_mb"
 

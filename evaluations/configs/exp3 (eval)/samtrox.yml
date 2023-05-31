@@ -71,6 +71,27 @@ params:
 wandb:
     group: "samtrox_bc"
 ---
+name: "BC_TESTSPLIT"
+
+experiment_id: "breast_cancer"
+
+params:
+    num_component_adapter_config:
+      del_iters: 100
+      add_iters: 50
+
+    sample_selector_config:
+      desired_samples_per_component: 100
+      ratio_reused_samples_to_desired: 0.
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 1.
+
+    environment_config:
+      size_test_set: 227
+wandb:
+    group: "samtrox_bcts"
+---
 name: "GC"
 
 experiment_id: "german_credit"
@@ -89,6 +110,28 @@ params:
 
 wandb:
     group: "samtrox_gc"
+---
+name: "GC_TESTPLIT"
+
+experiment_id: "german_credit"
+
+params:
+    num_component_adapter_config:
+        del_iters: 100
+        add_iters: 25
+
+    sample_selector_config:
+        desired_samples_per_component: 250
+        ratio_reused_samples_to_desired: 1.61803
+
+    weight_stepsize_adapter_config:
+        initial_stepsize: 0.8
+
+    environment_config:
+      size_test_set: 600
+
+wandb:
+    group: "samtrox_gcts"
 ---
 name: "BC_mb"
 
