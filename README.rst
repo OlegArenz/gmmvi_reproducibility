@@ -5,14 +5,21 @@ wandb-credentials, however, the fetched raw-data is stored within this repositor
 
 Setting up the Python environment
 =================================
-You need to install the following python packages:
+To use the newest package versions of the dependencies (e.g. tensorflow), run
 
 .. code-block:: console
 
-    pip install gmmvi # from supplementary
-    pip install tf-robot-learning # from supplementary, only needed for Talos experiments
+    pip install gmmvi==1.0
     pip install cw2
     pip install wandb # You need to create an account at wandb.com, and provide your credentials afterwards (via `wandb login`)
+
+Alternately, you can use the package versions that we used on our cluster by running
+
+.. code-block:: console
+
+    pip install -r requirements.txt # This already installs cw2 and wandb
+    pip install --no-deps gmmvi==1.0
+
 
 
 Running the scripts
