@@ -263,8 +263,13 @@ if __name__ == "__main__":
     #                       "samyrux_gc", "samyrox_gc", "samyron_gc",
     #                       "sepyfux_gc", "sepyrux_gc", "zamtrux_gc"],
     #                 secondary_metrics=["bi_accuracy:"])
-    fetch_exp3_eval("amortizedvips/logregacc", "GCMB_EVAL",
-                        [ "samtrux_gcmb", "samtrox_gcmb", "samtron_gcmb",
-                          "samyrux_gcmb", "samyrox_gcmb", "samyron_gcmb",
-                          "sepyfux_gcmb", "sepyrux_gcmb", "zamtrux_gcmb"],
+    # fetch_exp3_eval("amortizedvips/logregacc", "GCMB_EVAL",
+    #                     [ "samtrux_gcmb", "samtrox_gcmb", "samtron_gcmb",
+    #                       "samyrux_gcmb", "samyrox_gcmb", "samyron_gcmb",
+    #                       "sepyfux_gcmb", "sepyrux_gcmb", "zamtrux_gcmb"],
+    #                 metric="elbo_fb:", secondary_metrics=["bi_accuracy:"])
+    fetch_exp3_eval("amortizedvips/logregacc", "BCMB_EVAL",
+                        [ "samtrux_bcmb2", "samtrox_bcmb2", "samtron_bcmb2",
+                          "samyrux_bcmb2", "samyrox_bcmb2", "samyron_bcmb2",
+                          "sepyfux_bcmb2", "sepyrux_bcmb2", "zamtrux_bcmb2"],
                     metric="elbo_fb:", secondary_metrics=["bi_accuracy:"])
