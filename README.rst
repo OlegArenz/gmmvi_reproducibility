@@ -1,5 +1,5 @@
 This repository contains scripts and config files that were used for running the experiments of the paper
-"A Unified Perspective on Natural Gradient Variational Inference with Gaussian Mixture Models" (Arenz et al. 2023).
+"A Unified Perspective on Natural Gradient Variational Inference with Gaussian Mixture Models" (`Arenz et al., 2023`_).
 The primary motivation for this repository is to document the exact conditions under which the experiments have been
 conducted, including hyperparameter search. The scripts for fetching the data can not be used without our
 wandb-credentials, however, the fetched raw-data is stored within this repository.
@@ -178,6 +178,10 @@ the fetch_exp3_eval()-call.  The following experiments were affected:
 - SEPYRUX on TALOS: 6 bad seeds
 - We also ignored two seeds for ZAMTRUX on Planar Robot, as the corresponding runs terminated early due to OOM.
 
+
 References
 ----------
-O. Arenz, P. Dahlinger, Z. Ye, M. Volpp, and G. Neumann. A unified perspective on natural gradient variational inference with gaussian mixture models. Transactions on Machine Learning Research, 2023. URL: https://openreview.net/forum?id=tLBjsX4tjs.
+
+.. _Arenz et al., 2023:
+
+\O. Arenz, P. Dahlinger, Z. Ye, M. Volpp, and G. Neumann. A unified perspective on natural gradient variational inference with gaussian mixture models. Transactions on Machine Learning Research, 2023. URL: https://openreview.net/forum?id=tLBjsX4tjs.
