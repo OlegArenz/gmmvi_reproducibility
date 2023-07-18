@@ -55,11 +55,11 @@ Running the Sweeps
 We used the Bayesian optimizer provided by WandB for hyperparameter optimization. The config files showing the
 considered hyperparameters and their ranges (or prior distributions) can be found in
 
-- `hyperopt/configs/experiments/exp1 (update stability for single gaussians)/breast_cancer <hyperopt/configs/experiments/exp1 (update stability for single gaussians)/breast_cancer>`_
+- `hyperopt/configs/experiments/exp1 (update stability for single gaussians)/breast_cancer <hyperopt/configs/experiments/exp1%20(update%20stability%20for%20single %20gaussians)/breast_cancer>`_
 
-- `hyperopt/configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb <hyperopt/configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb>`_
+- `hyperopt/configs/experiments/exp1 (update stability for single gaussians)/breast_cancer_mb <hyperopt/configs/experiments/exp1%20(update%20stability%20for%20single%20gaussians)/breast_cancer_mb>`_
 
-- `hyperopt/configs/experiments/exp1 (update stability for single gaussians)/wine <hyperopt/configs/experiments/exp1 (update stability for single gaussians)/wine>`_
+- `hyperopt/configs/experiments/exp1 (update stability for single gaussians)/wine <hyperopt/configs/experiments/exp1%20(update%20stability%20for%20single%20gaussians)/wine>`_
 
 The "command" section in these files also define the maximum time per worker ("--max_seconds").
 
@@ -80,7 +80,7 @@ to run a gmmvi optimization, whenever they are provided with new hyperparameters
 Evaluating the Sweeps
 ~~~~~~~~~~~~~~~~~~~~~
 For evaluating the sweeps, we fetched the logged data from wandb by running
-`hyperopt/fetch_exp1_sweeps.py <hyperopt/fetch_exp1_sweeps.py>`. This script created
+`hyperopt/fetch_exp1_sweeps.py <hyperopt/fetch_exp1_sweeps.py>`_. This script created
 the folders `hyperopt/results/exp1_bc <hyperopt/results/exp1_bc>`_,
 `hyperopt/results/exp1_bcmb <hyperopt/results/exp1_bcmb>`_, and
 `hyperopt/results/exp1_wine <hyperopt/results/exp1_wine>`_ and stored
@@ -91,7 +91,7 @@ Running the 10-seed evaluations for SEPTRUX and SEPYRUX
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The script `hyperopt/table_exp1.py <hyperopt/table_exp1.py>`_ also outputs the hyperparameters of the best runs,
 which were used in the configs for the 10 seed evaluations for SEPTRUX and SEPYRUX, which can be found in
-`evaluations/configs/exp1 (update stability)/ <evaluations/configs/exp1 (update stability)/>`_.
+`evaluations/configs/exp1 (update stability)/ <evaluations/configs/exp1%20(update%20stability)/>`_.
 These evaluations were started by running
 `evaluations/run_exp1_evals.sh <evaluations/run_exp1_evals.sh>`_. The results of the 10-seed evaluations were fetched
 from wandb using `evaluations/fetch_exp1.py <evaluations/fetch_exp1.py>`, which outputs the data for the second table of
@@ -102,7 +102,7 @@ Experiment 2: Weight Update and Exploration
 Hyperoptimization for the second experiment was performed akin to the hyperoptimization for the Experiment 1.
 
 1. The config files that specify the hyperparameter-ranges can be found in
-   `hyperopt/configs/experiments/exp2 (multimodal targets) <hyperopt/configs/experiments/exp2 (multimodal targets)>`_.
+   `hyperopt/configs/experiments/exp2 (multimodal targets) <hyperopt/configs/experiments/exp2%20(multimodal%20targets)>`_.
 
 2. The sweeps and workers were started by executing `hyperopt/run_exp2_gmm20.sh <hyperopt/run_exp2_gmm20.sh>`_,
    `hyperopt/run_exp2_planar4.sh <hyperopt/run_exp2_planar4.sh>`_,
@@ -143,9 +143,9 @@ experience from the previous experiments to select promising hyperparameters. Or
 4. We also had to restart several hyperparameter searches due to typos.
 
 The previously tried configs can be found under
-`evaluations/configs/exp3 (hyperopt)/previously_tried_grids <evaluations/configs/exp3 (hyperopt)/previously_tried_grids>`_.
+`evaluations/configs/exp3 (hyperopt)/previously_tried_grids <evaluations/configs/exp3%20(hyperopt)/previously_tried_grids>`_.
 The 24 parameter-settings that were eventually used for selecting the best settings for the 10-seed evaluations can be
-found in `evaluations/configs/exp3 (hyperopt) <evaluations/configs/exp3 (hyperopt)>`_. We stress that the additional
+found in `evaluations/configs/exp3 (hyperopt) <evaluations/configs/exp3%20(hyperopt)>`_. We stress that the additional
 evaluations mainly benefited SEPYFUX and SEPYRUX (which still perform worst among the tested candidates overall).
 The experiments were started using the run_exp3_<environment>.sh scripts that can be found in
 `evaluations <evaluations>`_.
