@@ -2,7 +2,7 @@ This repository contains scripts and config files that were used for running the
 "A Unified Perspective on Natural Gradient Variational Inference with Gaussian Mixture Models" (`Arenz et al., 2023`_).
 The primary motivation for this repository is to document the exact conditions under which the experiments have been
 conducted, including hyperparameter search. The scripts for fetching the data can not be used without our
-wandb-credentials, however, the fetched raw-data is stored within this repository.
+wandb-credentials, however, you can `download the fetched raw-data from zenodo <https://zenodo.org/record/8158833/files/gmmvi_data.tar.xz?download=1>`_ and extract in this repository.
 
 Setting up the Python environment
 =================================
@@ -21,7 +21,14 @@ Alternately, you can use the package versions that we used on our cluster by run
     pip install -r requirements.txt # This already installs cw2 and wandb
     pip install --no-deps gmmvi==1.0
 
+Downloading the data
+====================
+The logs / results of the experiments are not part of this repository. However, you can download the data and extract it to the project root as follows:
 
+.. code-block:: console
+
+    wget https://zenodo.org/record/8158833/files/gmmvi_data.tar.xz
+    tar xf gmmvi_data.tar.xz --strip-components=1
 
 Running the scripts
 ===================
